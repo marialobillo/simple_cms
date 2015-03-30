@@ -1,0 +1,45 @@
+<div class="container">
+	
+	<%= link_to("<< Back to  List", {:action => 'index'}, :class => 'back-link') %>
+
+	<div class="pages new">
+		
+		<h2 class="text-center">Create Page</h2>
+
+		<%= form_for(:subject, :url => {:action => 'create'}) do |f| %>
+
+			<div class="label">Subject ID</div>
+			<div class="form-control">
+				<%= f.text_field(:subject_id) %>
+			</div>
+
+			<div class="label">Name</div>
+			<div class="form-control">
+				<%= f.text_field(:name) %>
+			</div>
+
+			<div class="label">Position</div>
+			<div class="form-control">
+				<%= f.text_field(:position) %>
+			</div>
+
+			<div class="label">Permalink</div>
+			<div class="form-control">
+				<%= f.text_field(:permalink) %>
+			</div>
+
+			<div class="label">Visible</div>
+			<div class="form-control">
+				<%= f.text_field(:visible) %>
+			</div>
+
+			<div class="btn form-buttons">
+				<%= submit_tag("Create Page") %>
+			</div>
+		<% end %>
+
+
+	</div>
+
+
+</div>

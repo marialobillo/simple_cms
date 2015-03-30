@@ -1,0 +1,50 @@
+<div class="container">
+	
+	<%= link_to("<< Back to  List", {:action => 'index'}, :class => 'back-link') %>
+
+	<div class="sections new">
+		
+		<h2 class="text-center">Create Section</h2>
+
+		<%= form_for(:section, :url => {:action => 'create'}) do |f| %>
+
+			<div class="label">Page ID</div>
+			<div class="form-control">
+				<%= f.text_field(:page_id) %>
+			</div>	
+
+			<div class="label">Name</div>
+			<div class="form-control">
+				<%= f.text_field(:name) %>
+			</div>
+
+			<div class="label">Position</div>
+			<div class="form-control">
+				<%= f.text_field(:position) %>
+			</div>
+
+			<div class="label">Content Type</div>
+			<div class="form-control">
+				<%= f.text_field(:content_type) %>
+			</div>
+
+			<div class="label">Content</div>
+			<div class="form-control">
+				<%= f.text_field(:content) %>
+			</div>
+
+			<div class="label">Visible</div>
+			<div class="form-control">
+				<%= f.text_field(:visible) %>
+			</div>
+
+			<div class="btn form-buttons">
+				<%= submit_tag("Create Seciton") %>
+			</div>
+		<% end %>
+
+
+	</div>
+
+
+</div>
