@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Cms / Admin</title>
+
+</head>
+<body>
+	
+	<h1 class="text-center">Simple CMS | <%= @page_title || "Admin" %></h1>
+
+	<div class="row">
+		
+		<% if ! flash[:notice].blank? %>
+			<div class="notice">
+			<%= flash[:notice] %>
+			</div>
+		<% end %>
+	</div>
+
+<div class="container">
+
+	<!-- before yield -->
+
+	<%= yield %>
+
+	<!-- after yield -->
+
+</div>
+<br><br>
+<div class="footer">
+	<strong>Simple CMS in Ruby on Rails</strong>
+</div>
+
+</body>
+</html>

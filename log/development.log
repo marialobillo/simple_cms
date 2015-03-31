@@ -2027,3 +2027,439 @@ Processing by PagesController#index as HTML
   [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
   Rendered pages/index.html.erb (6.7ms)
 Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/subjects" for ::1 at 2015-03-31 16:32:53 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by SubjectsController#index as HTML
+  [1m[35mSubject Load (5.7ms)[0m  SELECT `subjects`.* FROM `subjects`  ORDER BY subjects.position ASC
+  [1m[36m (9.5ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6
+  Rendered subjects/index.html.erb within layouts/application (98.7ms)
+Completed 200 OK in 115ms (Views: 55.2ms | ActiveRecord: 54.6ms)
+
+
+Started GET "/subjects" for ::1 at 2015-03-31 16:38:43 +0200
+Processing by SubjectsController#index as HTML
+  [1m[36mSubject Load (0.6ms)[0m  [1mSELECT `subjects`.* FROM `subjects`  ORDER BY subjects.position ASC[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  Rendered subjects/index.html.erb within layouts/admin (21.4ms)
+Completed 200 OK in 28ms (Views: 20.7ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/subjects" for ::1 at 2015-03-31 16:39:38 +0200
+Processing by SubjectsController#index as HTML
+  [1m[35mSubject Load (0.3ms)[0m  SELECT `subjects`.* FROM `subjects`  ORDER BY subjects.position ASC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6
+  Rendered subjects/index.html.erb within layouts/admin (7.2ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/subjects" for ::1 at 2015-03-31 16:39:59 +0200
+Processing by SubjectsController#index as HTML
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT `subjects`.* FROM `subjects`  ORDER BY subjects.position ASC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  Rendered subjects/index.html.erb within layouts/admin (7.1ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/pages" for ::1 at 2015-03-31 16:41:04 +0200
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (0.3ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 2
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  Rendered pages/index.html.erb within layouts/admin (46.3ms)
+Completed 200 OK in 51ms (Views: 25.3ms | ActiveRecord: 25.4ms)
+
+
+Started GET "/pages/new" for ::1 at 2015-03-31 16:41:06 +0200
+Processing by PagesController#new as HTML
+  Rendered pages/new.html.erb within layouts/admin (14.3ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pages/create" for ::1 at 2015-03-31 16:41:27 +0200
+Processing by PagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cMB4+fK0+gRx8dFbBTWxTB1omfWDksBBqcWmoE+qDL3JU+3LEeQVp439RwiDkX0Fte3jObs/nh1OPb3Lf18YEg==", "subject"=>{"subject_id"=>"10", "name"=>"Pulgarcito", "position"=>"10", "permalink"=>"El link permanente", "visible"=>"1"}, "commit"=>"Create Page"}
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: page):
+  app/controllers/pages_controller.rb:54:in `page_params'
+  app/controllers/pages_controller.rb:18:in `create'
+
+
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (46.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (39.6ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (87.8ms)
+
+
+Started POST "/pages/create" for ::1 at 2015-03-31 16:45:40 +0200
+Processing by PagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cMB4+fK0+gRx8dFbBTWxTB1omfWDksBBqcWmoE+qDL3JU+3LEeQVp439RwiDkX0Fte3jObs/nh1OPb3Lf18YEg==", "subject"=>{"subject_id"=>"10", "name"=>"Pulgarcito", "position"=>"10", "permalink"=>"El link permanente", "visible"=>"1"}, "commit"=>"Create Page"}
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: page):
+  app/controllers/pages_controller.rb:54:in `page_params'
+  app/controllers/pages_controller.rb:18:in `create'
+
+
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (40.7ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (33.7ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (75.0ms)
+
+
+Started POST "/pages/create" for ::1 at 2015-03-31 16:45:46 +0200
+Processing by PagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cMB4+fK0+gRx8dFbBTWxTB1omfWDksBBqcWmoE+qDL3JU+3LEeQVp439RwiDkX0Fte3jObs/nh1OPb3Lf18YEg==", "subject"=>{"subject_id"=>"10", "name"=>"Pulgarcito", "position"=>"10", "permalink"=>"El link permanente", "visible"=>"1"}, "commit"=>"Create Page"}
+Completed 400 Bad Request in 1ms
+
+ActionController::ParameterMissing (param is missing or the value is empty: page):
+  app/controllers/pages_controller.rb:54:in `page_params'
+  app/controllers/pages_controller.rb:18:in `create'
+
+
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.2ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (32.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (72.0ms)
+
+
+Started GET "/pages/new" for ::1 at 2015-03-31 16:45:56 +0200
+Processing by PagesController#new as HTML
+  Rendered pages/new.html.erb within layouts/admin (4.8ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/pages/create" for ::1 at 2015-03-31 16:46:08 +0200
+Processing by PagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0m7Vx39wv5uq7e20LgVLfRJw9XqxQVsiP9m8fNUBFwtr/UD1nCBQOFbhe+eooYc0uvWPtonsBX7YIacX5fQDpA==", "page"=>{"subject_id"=>"10", "name"=>"Pulgarcito", "position"=>"10", "permalink"=>"El link", "visible"=>"1"}, "commit"=>"Create Page"}
+  [1m[35m (0.9ms)[0m  BEGIN
+  [1m[36mSQL (11.8ms)[0m  [1mINSERT INTO `pages` (`subject_id`, `name`, `permalink`, `position`, `visible`, `created_at`, `updated_at`) VALUES (10, 'Pulgarcito', 'El link', 10, 1, '2015-03-31 14:46:08.934784', '2015-03-31 14:46:08.934784')[0m
+  [1m[35m (3.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/pages
+Completed 302 Found in 22ms (ActiveRecord: 16.0ms)
+
+
+Started GET "/pages" for ::1 at 2015-03-31 16:46:08 +0200
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (1.4ms)[0m  [1mSELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 2[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4[0m
+  Rendered pages/index.html.erb within layouts/admin (10.8ms)
+Completed 200 OK in 13ms (Views: 10.0ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/pages/edit/4" for ::1 at 2015-03-31 16:46:25 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPage Load (18.2ms)[0m  SELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 4 LIMIT 1
+  Rendered pages/edit.html.erb within layouts/admin (1.8ms)
+Completed 200 OK in 31ms (Views: 4.4ms | ActiveRecord: 18.2ms)
+
+
+Started POST "/pages/update/4" for ::1 at 2015-03-31 16:46:34 +0200
+Processing by PagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"S2/jBao4mvcyzkRkdfJB75MFQGm4bZKHb/50QaRrq97y/HY3SWh1VM7C0jfzVo2mO4A6pYDAzNuIBm8qlJ6/cQ==", "page"=>{"subject_id"=>"10", "name"=>"Caperucita", "position"=>"10", "permalink"=>"El link", "visible"=>"1"}, "commit"=>"Update Page", "id"=>"4"}
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 4 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (91.0ms)[0m  [1mUPDATE `pages` SET `name` = 'Caperucita', `updated_at` = '2015-03-31 14:46:34.126803' WHERE `pages`.`id` = 4[0m
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://localhost:3000/pages/show/4
+Completed 302 Found in 97ms (ActiveRecord: 91.7ms)
+
+
+Started GET "/pages/show/4" for ::1 at 2015-03-31 16:46:34 +0200
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 4 LIMIT 1[0m
+  Rendered pages/show.html.erb within layouts/admin (1.0ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/pages" for ::1 at 2015-03-31 16:46:36 +0200
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (0.7ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 2
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4
+  Rendered pages/index.html.erb within layouts/admin (14.5ms)
+Completed 200 OK in 18ms (Views: 15.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/pages/delete/2" for ::1 at 2015-03-31 16:46:40 +0200
+Processing by PagesController#delete as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 2 LIMIT 1[0m
+  Rendered pages/delete.html.erb within layouts/admin (1.9ms)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/pages/destroy/2" for ::1 at 2015-03-31 16:46:44 +0200
+Processing by PagesController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"47tI2c1MKlkzRSI/XH3f+xKoL5PAV+VXDbhFPfcXtbBaKN3rLhzF+s9JtGza2ROyui1VX/j6uwvqQF5Wx+KhHw==", "commit"=>"Delete Page", "id"=>"2"}
+  [1m[35mPage Load (0.3ms)[0m  SELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (2.8ms)[0m  DELETE FROM `admin_users_pages` WHERE `admin_users_pages`.`page_id` = 2
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM `pages` WHERE `pages`.`id` = 2[0m
+  [1m[35m (6.0ms)[0m  COMMIT
+Redirected to http://localhost:3000/pages
+Completed 302 Found in 47ms (ActiveRecord: 28.4ms)
+
+
+Started GET "/pages" for ::1 at 2015-03-31 16:46:44 +0200
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4
+  Rendered pages/index.html.erb within layouts/admin (7.8ms)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/sections" for ::1 at 2015-03-31 16:47:14 +0200
+Processing by SectionsController#index as HTML
+  [1m[36mSection Load (0.4ms)[0m  [1mSELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC[0m
+  Rendered sections/index.html.erb within layouts/admin (7.7ms)
+Completed 200 OK in 12ms (Views: 11.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/sections/new" for ::1 at 2015-03-31 16:47:19 +0200
+Processing by SectionsController#new as HTML
+  Rendered sections/new.html.erb within layouts/admin (3.0ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/sections/create" for ::1 at 2015-03-31 16:47:54 +0200
+Processing by SectionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"khngiBXlxOndHU2vq22TPEHZHJDvru4aZgxToZbToXArinW69rUrSiER2/wtyV916VxmXNcDsEaB9EjKpia13w==", "section"=>{"page_id"=>"10", "name"=>"Perfumería", "position"=>"7", "content_type"=>"No recuerdo", "content"=>"El libro completoº", "visible"=>"1"}, "commit"=>"Create Seciton"}
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO `sections` (`page_id`, `name`, `position`, `visible`, `content_type`, `content`, `created_at`, `updated_at`) VALUES (10, 'Perfumería', 7, 1, 'No recuerdo', 'El libro completoº', '2015-03-31 14:47:54.753679', '2015-03-31 14:47:54.753679')[0m
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/sections
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/sections" for ::1 at 2015-03-31 16:47:54 +0200
+Processing by SectionsController#index as HTML
+  [1m[36mSection Load (0.3ms)[0m  [1mSELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC[0m
+  Rendered sections/index.html.erb within layouts/admin (2.8ms)
+Completed 200 OK in 5ms (Views: 4.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sections/show/3" for ::1 at 2015-03-31 16:48:00 +0200
+Processing by SectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSection Load (0.9ms)[0m  SELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 3 LIMIT 1
+  Rendered sections/show.html.erb within layouts/admin (1.6ms)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/sections" for ::1 at 2015-03-31 16:48:02 +0200
+Processing by SectionsController#index as HTML
+  [1m[36mSection Load (0.5ms)[0m  [1mSELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC[0m
+  Rendered sections/index.html.erb within layouts/admin (3.8ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sections/edit/3" for ::1 at 2015-03-31 16:48:03 +0200
+Processing by SectionsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSection Load (0.4ms)[0m  SELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 3 LIMIT 1
+  Rendered sections/edit.html.erb within layouts/admin (2.0ms)
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/sections/update/3" for ::1 at 2015-03-31 16:48:06 +0200
+Processing by SectionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZU2IFnvxjmMeSNe12Wb8/PmPiAw928EjhJg3VC38Va7c3h0kmKFhwOJEQeZfwjC1UQrywAV2n39jYCw/HQlBAQ==", "section"=>{"page_id"=>"10", "name"=>"Perfumería", "position"=>"7", "content_type"=>"No recuerdo", "content"=>"El libro completo", "visible"=>"1"}, "commit"=>"Update Section", "id"=>"3"}
+  [1m[36mSection Load (0.8ms)[0m  [1mSELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 3 LIMIT 1[0m
+Completed 500 Internal Server Error in 9ms
+
+NameError (undefined local variable or method `page_params' for #<SectionsController:0x007fb4013045a0>):
+  app/controllers/sections_controller.rb:33:in `update'
+
+
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.1ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (41.5ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (84.1ms)
+
+
+Started POST "/sections/update/3" for ::1 at 2015-03-31 16:48:57 +0200
+Processing by SectionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZU2IFnvxjmMeSNe12Wb8/PmPiAw928EjhJg3VC38Va7c3h0kmKFhwOJEQeZfwjC1UQrywAV2n39jYCw/HQlBAQ==", "section"=>{"page_id"=>"10", "name"=>"Perfumería", "position"=>"7", "content_type"=>"No recuerdo", "content"=>"El libro completo", "visible"=>"1"}, "commit"=>"Update Section", "id"=>"3"}
+  [1m[35mSection Load (0.3ms)[0m  SELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE `sections` SET `content` = 'El libro completo', `updated_at` = '2015-03-31 14:48:57.476639' WHERE `sections`.`id` = 3
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/sections/show/3
+Completed 302 Found in 19ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/sections/show/3" for ::1 at 2015-03-31 16:48:57 +0200
+Processing by SectionsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSection Load (0.2ms)[0m  SELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 3 LIMIT 1
+  Rendered sections/show.html.erb within layouts/admin (0.5ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/sections" for ::1 at 2015-03-31 16:48:59 +0200
+Processing by SectionsController#index as HTML
+  [1m[36mSection Load (0.5ms)[0m  [1mSELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC[0m
+  Rendered sections/index.html.erb within layouts/admin (4.1ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/sections/delete/1" for ::1 at 2015-03-31 16:49:04 +0200
+Processing by SectionsController#delete as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSection Load (0.5ms)[0m  SELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 1 LIMIT 1
+  Rendered sections/delete.html.erb within layouts/admin (2.1ms)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/sections/destroy/1" for ::1 at 2015-03-31 16:49:05 +0200
+Processing by SectionsController#destroy as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"eIQnz4z5fVoe1w3tHiLcCicQ8jfc4A1Sh/QiRDwRsjDBF7L9b6mS+eLbm76YhhBDj5WI++RNUw5gDDkvDOSmnw==", "commit"=>"Delete Section", "id"=>"1"}
+  [1m[36mSection Load (0.3ms)[0m  [1mSELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM `sections` WHERE `sections`.`id` = 1[0m
+  [1m[35m (0.9ms)[0m  COMMIT
+Redirected to http://localhost:3000/sections
+Completed 302 Found in 5ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/sections" for ::1 at 2015-03-31 16:49:05 +0200
+Processing by SectionsController#index as HTML
+  [1m[36mSection Load (1.5ms)[0m  [1mSELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC[0m
+  Rendered sections/index.html.erb within layouts/admin (3.9ms)
+Completed 200 OK in 7ms (Views: 4.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/sections/edit/2" for ::1 at 2015-03-31 17:44:15 +0200
+Processing by SectionsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSection Load (1.2ms)[0m  SELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 2 LIMIT 1
+  Rendered sections/edit.html.erb within layouts/admin (2.1ms)
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/sections/update/2" for ::1 at 2015-03-31 17:44:18 +0200
+Processing by SectionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"KQVMRpphqRf/bMlLTf27bvx40Sn8qZv5gGG4UfU2s9WQltl0eTFGtANgXxjLWXcnVP2r5cQExaVnmaM6xcOneg==", "section"=>{"page_id"=>"1", "name"=>"Deportes", "position"=>"4", "content_type"=>"Zapatos", "content"=>"Todas las marcas", "visible"=>"1"}, "commit"=>"Update Section", "id"=>"2"}
+  [1m[36mSection Load (0.3ms)[0m  [1mSELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 2 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `sections` SET `visible` = 1, `updated_at` = '2015-03-31 15:44:18.798041' WHERE `sections`.`id` = 2[0m
+  [1m[35m (0.8ms)[0m  COMMIT
+Redirected to http://localhost:3000/sections/show/2
+Completed 302 Found in 7ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/sections/show/2" for ::1 at 2015-03-31 17:44:18 +0200
+Processing by SectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSection Load (0.3ms)[0m  [1mSELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 2 LIMIT 1[0m
+  Rendered sections/show.html.erb within layouts/admin (0.5ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sections" for ::1 at 2015-03-31 17:44:32 +0200
+Processing by SectionsController#index as HTML
+  [1m[35mSection Load (0.9ms)[0m  SELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC
+  Rendered sections/index.html.erb within layouts/admin (6.6ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/sections/edit/2" for ::1 at 2015-03-31 17:44:35 +0200
+Processing by SectionsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSection Load (0.3ms)[0m  [1mSELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 2 LIMIT 1[0m
+  Rendered sections/edit.html.erb within layouts/admin (1.9ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/sections/update/2" for ::1 at 2015-03-31 17:44:41 +0200
+Processing by SectionsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FxUXB4d3QvkHR0KCqtVfNiSiElJb+kNb4XIMqgvdmzWuhoI1ZCetWvtL1NEscZN/jCdonmNXHQcGihfBOyiPmg==", "section"=>{"page_id"=>"1", "name"=>"Deportes y Ocio", "position"=>"4", "content_type"=>"Zapatos", "content"=>"Todas las marcas", "visible"=>"1"}, "commit"=>"Update Section", "id"=>"2"}
+  [1m[35mSection Load (0.4ms)[0m  SELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 2 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  UPDATE `sections` SET `name` = 'Deportes y Ocio', `updated_at` = '2015-03-31 15:44:41.065186' WHERE `sections`.`id` = 2
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/sections/show/2
+Completed 302 Found in 11ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/sections/show/2" for ::1 at 2015-03-31 17:44:41 +0200
+Processing by SectionsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSection Load (0.3ms)[0m  SELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 2 LIMIT 1
+  Rendered sections/show.html.erb within layouts/admin (0.7ms)
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/sections" for ::1 at 2015-03-31 17:55:04 +0200
+Processing by SectionsController#index as HTML
+  [1m[36mSection Load (1.4ms)[0m  [1mSELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC[0m
+  Rendered sections/index.html.erb within layouts/admin (6.8ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/subjects" for ::1 at 2015-03-31 17:55:15 +0200
+Processing by SubjectsController#index as HTML
+  [1m[35mSubject Load (0.4ms)[0m  SELECT `subjects`.* FROM `subjects`  ORDER BY subjects.position ASC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6
+  Rendered subjects/index.html.erb within layouts/admin (28.8ms)
+Completed 200 OK in 35ms (Views: 22.0ms | ActiveRecord: 10.3ms)

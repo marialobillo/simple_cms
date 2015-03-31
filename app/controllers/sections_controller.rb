@@ -1,6 +1,6 @@
 class SectionsController < ApplicationController
 
-  layout false
+  layout "admin"
 
   def index
     @sections = Section.sorted
@@ -30,7 +30,7 @@ class SectionsController < ApplicationController
 
   def update 
      @section = Section.find(params[:id])
-    if @section.update_attributes(page_params)
+    if @section.update_attributes(section_params)
       flash[:notice] = "Section update successfully."
       redirect_to(:action => 'show', :id => @section.id)
     else
