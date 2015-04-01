@@ -1,0 +1,17 @@
+<%
+text = "This is a long sample text. It includes line breaks\n
+	and double-line breaks.\n\n It rambles on and on and on.\n\n
+	Until we get to this last line."
+%>
+
+<h2>word_wrap</h2>
+<%= word_wrap(text, :line_width => 20)%>
+<hr>
+
+<h2>simple_format</h2>
+<%= simple_format(text)%>
+<hr>
+
+<h2>simple_format + word + wrap</h2>
+<%= simple_format(word_wrap(text, :line_width => 30))%>
+<hr>

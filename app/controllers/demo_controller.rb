@@ -5,4 +5,8 @@ class DemoController < ApplicationController
   def index
   	render('index')
   end
+
+  def text_helpers
+
+  end
 end

@@ -8,20 +8,8 @@
 
 		<%= form_for(:subject, :url => {:action => 'update', :id => @subject.id}) do |f| %>
 
-			<div class="label">Name</div>
-			<div class="form-control">
-				<%= f.text_field(:name) %>
-			</div>
+			<%= render(:partial => "form", :locals => {:f => f}) %>
 
-			<div class="label">Position</div>
-			<div class="form-control">
-				<%= f.text_field(:position) %>
-			</div>
-
-			<div class="label">Visible</div>
-			<div class="form-control">
-				<%= f.text_field(:visible) %>
-			</div>
 
 			<div class="btn form-buttons">
 				<%= submit_tag("Update Subject") %>
