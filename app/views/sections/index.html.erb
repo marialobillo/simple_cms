@@ -7,11 +7,11 @@
 
 		<table class="table" sumamry="Section list">
 			<tr class="header">
-				<th></th>
 				<th>Page ID</th>
 				<th>Section</th>
 				<th>Content Type</th>
 				<th>Content</th>
+				<th>Section</th>
 				<th>Visible</th>
 				<th>Actions</th>
 			</tr>
@@ -22,7 +22,7 @@
 				<td><%= section.name %></td>
 				<td><%= section.content_type %></td>
 				<td><%= section.content %></td>
-				<td class="center"><%= section.visible ? 'Yes' : 'No' %></td>
+				<td class="center"><%= status_tag(section.visible) %></td>
 				<td class="actions">
 					<%= link_to("Show", {:action => 'show', :id => section.id}, :class => 'action show') %>
 					<%= link_to("Edit", {:action => 'edit', :id => section.id}, :class => 'action edit') %>

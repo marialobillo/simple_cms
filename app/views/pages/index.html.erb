@@ -6,7 +6,7 @@
 
 		<table class="table" sumamry="Page list">
 			<tr class="header">
-				<th></th>
+				
 				<th>Position</th>
 				<th>Subject ID</th>
 				<th>Page</th>
@@ -21,7 +21,7 @@
 				<td><%= page.subject_id %></td>
 				<td><%= page.name %></td>
 				<td><%= page.permalink %></td>
-				<td class="center"><%= page.visible ? 'Yes' : 'No' %></td>
+				<td class="center"><%= status_tag(page.visible) %></td>
 				<td class="center"><%= page.sections.size %></td>
 				<td class="actions">
 					<%= link_to("Show", {:action => 'show', :id => page.id}, :class => 'action show') %>
