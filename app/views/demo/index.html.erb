@@ -3,3 +3,9 @@
 <h2>Hola Mundo!</h2>
 
 <%= link_to("Subjects", 'subjects/index', :class => 'action index') %>
+
+<br>
+
+<%= link_to('Roar', '#', :onclick => "jsRoar('JavaScript'); return true;") %>
+
+<%= javascript_tag("jsRoar('Rails');") %>
