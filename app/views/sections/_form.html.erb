@@ -1,0 +1,26 @@
+<div class="row">
+	<div class="col-md-6">
+	
+		<%= f.label(:page_id, "Page_id") %>			
+		<%= f.text_field(:page_id, :class => 'form-control') %>
+
+		<%= f.label(:name, "Name") %>
+		<%= f.text_field(:name, :class => 'form-control') %>
+	
+		<%= f.label(:position) %>
+		<%= f.text_field(:position, :class => 'form-control') %>
+
+		<%= f.label(:content_type) %>
+		<br>
+		<%= f.radio_button(:content_type, 'text') %> Text
+		<%= f.radio_button(:content_type, 'HTML') %> HTML
+		<br>
+
+		<%= f.label(:content) %>
+		<%= f.text_field(:content, :class => 'form-control') %>
+
+		<%= f.label(:visible) %>
+		<%= f.text_field(:visible, :class => 'form-control') %>
+
+</div>
+</div>

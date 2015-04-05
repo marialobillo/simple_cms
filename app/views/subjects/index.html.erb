@@ -2,7 +2,10 @@
 <div class="subject index">
 		<h2 class="text-center">Subjects</h2>
 
-		<%= link_to("Add New Subject", {:action => 'new'}, :class => 'action new') %>
+
+		<br>
+		<%= link_to( image_tag('new.jpg', :size => '20x20', :alt => '+') + "Add New Subject", {:action => 'new'}, :class => 'action new') %>
+		<br>
 	<div><%= pluralize(@subjects.size, 'subject') %> found</div>
 		<table class="table" sumamry="Subject list">
 			<tr class="header">

@@ -1,14 +1,14 @@
-	<div class="label">Name</div>
-	<div class="form-control">
-		<%= f.text_field(:name) %>
-	</div>
+<div class="col-md-6">
+	
+		<%= f.label(:name, "Name") %>
+		<%= f.text_field(:name, :class => 'form-control') %>
+	
 
-	<div class="label">Position</div>
-	<div class="form-control">
-		<%= f.text_field(:position) %>
-	</div>
+		<%= f.label(:position) %>
+		<%= f.text_field(:position, :class => 'form-control') %>
+	
 
-	<div class="label">Visible</div>
-	<div class="form-control">
-		<%= f.text_field(:visible) %>
-	</div>
+		<%= f.label(:visible) %>
+		<%= f.check_box(:visible, :class => 'form-control') %>
+
+</div>
