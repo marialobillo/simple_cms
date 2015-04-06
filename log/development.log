@@ -4663,3 +4663,2397 @@ Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" fo
 
 
 Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 13:14:55 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-05 19:00:23 +0200
+Processing by SectionsController#index as HTML
+  [1m[35mSection Load (0.3ms)[0m  SELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC
+  Rendered sections/index.html.erb within layouts/admin (2.6ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:00:23 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:00:23 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:00:23 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-05 19:00:25 +0200
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4
+  Rendered pages/index.html.erb within layouts/admin (11.9ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:00:26 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:00:26 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:00:26 +0200
+
+
+Started GET "/pages/new" for ::1 at 2015-04-05 19:00:28 +0200
+Processing by PagesController#new as HTML
+  Rendered pages/_form.html.erb (3.4ms)
+  Rendered pages/new.html.erb within layouts/admin (5.2ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error (undefined method `postion' for #<Page:0x007ff6f79c9190>):
+     8: 			<%= f.text_field(:name, :class => 'form-control') %>
+     9: 
+    10: 			<%= f.label(:position) %>
+    11: 			<%= f.text_field(:postion, :class => 'form-control') %>
+    12: 
+    13: 
+    14: 			<%= f.label(:permalink) %>
+  app/views/pages/_form.html.erb:11:in `_app_views_pages__form_html_erb__2755423387777150863_70349346364600'
+  app/views/pages/new.html.erb:11:in `block in _app_views_pages_new_html_erb__1123968057609721837_70349346428820'
+  app/views/pages/new.html.erb:9:in `_app_views_pages_new_html_erb__1123968057609721837_70349346428820'
+
+
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.2ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (60.5ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (39.5ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (82.9ms)
+
+
+Started GET "/pages/new" for ::1 at 2015-04-05 19:00:48 +0200
+Processing by PagesController#new as HTML
+  Rendered pages/_form.html.erb (2.6ms)
+  Rendered pages/new.html.erb within layouts/admin (4.8ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:00:48 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:00:48 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:00:48 +0200
+
+
+Started GET "/pages/new" for ::1 at 2015-04-05 19:01:53 +0200
+Processing by PagesController#new as HTML
+  Rendered pages/_form.html.erb (2.1ms)
+  Rendered pages/new.html.erb within layouts/admin (4.6ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:01:53 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:01:53 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:01:53 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-05 19:01:57 +0200
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4
+  Rendered pages/index.html.erb within layouts/admin (8.7ms)
+Completed 200 OK in 23ms (Views: 21.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:01:57 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:01:57 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:01:57 +0200
+
+
+Started GET "/pages/edit/1" for ::1 at 2015-04-05 19:01:59 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPage Load (18.1ms)[0m  [1mSELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 1 LIMIT 1[0m
+  Rendered pages/edit.html.erb within layouts/admin (2.2ms)
+Completed 200 OK in 46ms (Views: 15.9ms | ActiveRecord: 18.1ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:01:59 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:01:59 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:01:59 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-05 19:02:04 +0200
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (0.4ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4[0m
+  Rendered pages/index.html.erb within layouts/admin (8.5ms)
+Completed 200 OK in 29ms (Views: 26.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:02:04 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:02:04 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:02:04 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-05 19:03:08 +0200
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (0.2ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4[0m
+  Rendered pages/index.html.erb within layouts/admin (6.1ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:03:08 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:03:08 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:03:08 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-05 19:03:13 +0200
+Processing by SectionsController#index as HTML
+  [1m[35mSection Load (6.8ms)[0m  SELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC
+  Rendered sections/index.html.erb within layouts/admin (10.5ms)
+Completed 200 OK in 26ms (Views: 18.9ms | ActiveRecord: 6.8ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:03:13 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:03:13 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:03:13 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-05 19:03:13 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-05 19:03:48 +0200
+Processing by SectionsController#index as HTML
+  [1m[36mSection Load (0.3ms)[0m  [1mSELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC[0m
+  Rendered sections/index.html.erb within layouts/admin (2.3ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:03:48 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:03:48 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-05 19:03:48 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:03:48 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-05 19:03:53 +0200
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (0.3ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4[0m
+  Rendered pages/index.html.erb within layouts/admin (6.8ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:03:53 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:03:53 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-05 19:03:53 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:03:53 +0200
+
+
+Started GET "/pages/edit/1" for ::1 at 2015-04-05 19:04:01 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPage Load (0.3ms)[0m  SELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 1 LIMIT 1
+  Rendered pages/edit.html.erb within layouts/admin (1.3ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:04:01 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:04:01 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:04:01 +0200
+
+
+Started POST "/pages/update/1" for ::1 at 2015-04-05 19:04:06 +0200
+Processing by PagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lm8fPIvl9mXRNhpIxAwcdwFf9x86aiNFe/Y6/Lf3Er0v/IoOaLUZxi06jBtCqNA+qdqN0wLHfRmcDiGXhwIGEg==", "page"=>{"subject_id"=>"1", "name"=>"Primera pagina", "position"=>"5", "permalink"=>"Primera", "visible"=>"0"}, "commit"=>"Update Page", "id"=>"1"}
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 1 LIMIT 1[0m
+  [1m[35m (6.1ms)[0m  BEGIN
+  [1m[36mSQL (22.3ms)[0m  [1mUPDATE `pages` SET `position` = 5, `updated_at` = '2015-04-05 17:04:06.620340' WHERE `pages`.`id` = 1[0m
+  [1m[35m (30.6ms)[0m  COMMIT
+Redirected to http://localhost:3000/pages/show/1
+Completed 302 Found in 69ms (ActiveRecord: 59.3ms)
+
+
+Started GET "/pages/show/1" for ::1 at 2015-04-05 19:04:06 +0200
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 1 LIMIT 1[0m
+  Rendered pages/show.html.erb within layouts/admin (1.0ms)
+Completed 200 OK in 13ms (Views: 12.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:04:06 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:04:06 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:04:06 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-05 19:04:09 +0200
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (0.3ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4[0m
+  Rendered pages/index.html.erb within layouts/admin (7.0ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-05 19:04:09 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:04:09 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:04:09 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:04:09 +0200
+
+
+Started GET "/pages/edit/3" for ::1 at 2015-04-05 19:04:12 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPage Load (0.4ms)[0m  SELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 3 LIMIT 1
+  Rendered pages/edit.html.erb within layouts/admin (1.5ms)
+Completed 200 OK in 19ms (Views: 17.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:04:12 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:04:12 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:04:12 +0200
+
+
+Started POST "/pages/update/3" for ::1 at 2015-04-05 19:04:16 +0200
+Processing by PagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"+z1HpgXj7Cs7SVIH51YRf0AC1IGENH8ZkDXR65ahDshCrtKU5rMDiMdFxFRh8t026IeuTbyZIUV3zcqAplQaZw==", "page"=>{"subject_id"=>"1", "name"=>"Segunda pagina", "position"=>"2", "permalink"=>"Segunda", "visible"=>"0"}, "commit"=>"Update Page", "id"=>"3"}
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE `pages` SET `position` = 2, `updated_at` = '2015-04-05 17:04:16.070415' WHERE `pages`.`id` = 3[0m
+  [1m[35m (1.2ms)[0m  COMMIT
+Redirected to http://localhost:3000/pages/show/3
+Completed 302 Found in 8ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/pages/show/3" for ::1 at 2015-04-05 19:04:16 +0200
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 3 LIMIT 1[0m
+  Rendered pages/show.html.erb within layouts/admin (0.5ms)
+Completed 200 OK in 18ms (Views: 17.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:04:16 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:04:16 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:04:16 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-05 19:04:18 +0200
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (0.3ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4[0m
+  Rendered pages/index.html.erb within layouts/admin (9.6ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:04:18 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-05 19:04:18 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:04:18 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:04:18 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-05 19:04:34 +0200
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (0.3ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4[0m
+  Rendered pages/index.html.erb within layouts/admin (7.3ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:04:34 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:04:34 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-05 19:04:34 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:04:34 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-05 19:04:39 +0200
+Processing by SectionsController#index as HTML
+  [1m[35mSection Load (0.3ms)[0m  SELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC
+  Rendered sections/index.html.erb within layouts/admin (2.7ms)
+Completed 200 OK in 15ms (Views: 14.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:04:39 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-05 19:04:39 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:04:39 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:04:39 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-05 19:04:50 +0200
+Processing by SectionsController#index as HTML
+  [1m[36mSection Load (0.3ms)[0m  [1mSELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC[0m
+  Rendered sections/index.html.erb within layouts/admin (3.7ms)
+Completed 200 OK in 19ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:04:50 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:04:50 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-05 19:04:50 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:04:50 +0200
+
+
+Started GET "/sections/new" for ::1 at 2015-04-05 19:05:07 +0200
+Processing by SectionsController#new as HTML
+  Rendered sections/_form.html.erb (2.7ms)
+  Rendered sections/new.html.erb within layouts/admin (5.0ms)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:05:07 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:05:07 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:05:07 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-05 19:05:09 +0200
+Processing by SectionsController#index as HTML
+  [1m[35mSection Load (0.4ms)[0m  SELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC
+  Rendered sections/index.html.erb within layouts/admin (3.8ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:05:09 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:05:09 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-05 19:05:09 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:05:09 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-05 19:05:38 +0200
+Processing by SectionsController#index as HTML
+  [1m[36mSection Load (0.2ms)[0m  [1mSELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC[0m
+  Rendered sections/index.html.erb within layouts/admin (2.1ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-05 19:05:38 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-05 19:05:38 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-05 19:05:38 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-05 19:05:38 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-06 14:15:54 +0200
+Processing by SectionsController#index as HTML
+  [1m[35mSection Load (39.8ms)[0m  SELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC
+  Rendered sections/index.html.erb within layouts/admin (79.9ms)
+Completed 200 OK in 108ms (Views: 34.8ms | ActiveRecord: 68.0ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 14:15:54 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 14:15:54 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 14:15:54 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 14:15:54 +0200
+
+
+Started GET "/sections/new" for ::1 at 2015-04-06 14:15:55 +0200
+Processing by SectionsController#new as HTML
+  Rendered sections/_form.html.erb (2.9ms)
+  Rendered sections/new.html.erb within layouts/admin (5.5ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 14:15:55 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 14:15:55 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 14:15:55 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-06 14:16:07 +0200
+Processing by SectionsController#index as HTML
+  [1m[36mSection Load (0.3ms)[0m  [1mSELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC[0m
+  Rendered sections/index.html.erb within layouts/admin (2.4ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 14:16:07 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 14:16:07 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 14:16:07 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 14:16:07 +0200
+
+
+Started GET "/subjects" for ::1 at 2015-04-06 14:16:10 +0200
+Processing by SubjectsController#index as HTML
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `subjects`
+  [1m[36mSubject Load (0.4ms)[0m  [1mSELECT `subjects`.* FROM `subjects`  ORDER BY subjects.position ASC[0m
+  [1m[35m (2.8ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  Rendered subjects/index.html.erb within layouts/admin (89.7ms)
+Completed 200 OK in 131ms (Views: 78.5ms | ActiveRecord: 48.2ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 14:16:10 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 14:16:10 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 14:16:10 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 14:16:10 +0200
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-06 14:16:13 +0200
+Processing by SubjectsController#new as HTML
+Completed 500 Internal Server Error in 2ms
+
+NameError (uninitialized constant SubjectsController::Suject):
+  app/controllers/subjects_controller.rb:15:in `new'
+
+
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.6ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (45.7ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (98.1ms)
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-06 14:16:56 +0200
+Processing by SubjectsController#new as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subjects`
+  Rendered subjects/_form.html.erb (4.6ms)
+  Rendered subjects/new.html.erb within layouts/admin (6.0ms)
+Completed 500 Internal Server Error in 24ms
+
+ActionView::Template::Error (wrong number of arguments (3 for 1..2)):
+     5: 	
+     6: 
+     7: 		<%= f.label(:position) %>
+     8: 		<%= f.text_field(:position, 1..@subject_count, :class => 'form-control') %>
+     9: 	
+    10: 
+    11: 		<%= f.label(:visible) %>
+  app/views/subjects/_form.html.erb:8:in `_app_views_subjects__form_html_erb__1334457722933326014_70349354016340'
+  app/views/subjects/new.html.erb:12:in `block in _app_views_subjects_new_html_erb__1944824989009641349_70349348834360'
+  app/views/subjects/new.html.erb:9:in `_app_views_subjects_new_html_erb__1944824989009641349_70349348834360'
+
+
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.5ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (33.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (74.0ms)
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-06 14:17:49 +0200
+Processing by SubjectsController#new as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (2.5ms)
+  Rendered subjects/new.html.erb within layouts/admin (3.5ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error (undefined method `merge' for 1..5:Range):
+     5: 	
+     6: 
+     7: 		<%= f.label(:position) %>
+     8: 		<%= f.text_field(:position, 1..@subject_count) %>
+     9: 	
+    10: 
+    11: 		<%= f.label(:visible) %>
+  app/views/subjects/_form.html.erb:8:in `_app_views_subjects__form_html_erb__1334457722933326014_70349346474280'
+  app/views/subjects/new.html.erb:12:in `block in _app_views_subjects_new_html_erb__1944824989009641349_70349348834360'
+  app/views/subjects/new.html.erb:9:in `_app_views_subjects_new_html_erb__1944824989009641349_70349348834360'
+
+
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.6ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.0ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (33.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (73.9ms)
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-06 14:18:49 +0200
+Processing by SubjectsController#new as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `subjects`
+  Rendered subjects/_form.html.erb (6.4ms)
+  Rendered subjects/new.html.erb within layouts/admin (8.1ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 14:18:49 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 14:18:49 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 14:18:49 +0200
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-06 14:19:08 +0200
+Processing by SubjectsController#new as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (1.4ms)
+  Rendered subjects/new.html.erb within layouts/admin (3.0ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 14:19:08 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 14:19:08 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 14:19:08 +0200
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-06 14:19:38 +0200
+Processing by SubjectsController#new as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subjects`
+  Rendered subjects/_form.html.erb (3.1ms)
+  Rendered subjects/new.html.erb within layouts/admin (5.3ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 14:19:38 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 14:19:38 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 14:19:38 +0200
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-06 14:20:01 +0200
+Processing by SubjectsController#new as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (1.5ms)
+  Rendered subjects/new.html.erb within layouts/admin (3.0ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 14:20:01 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 14:20:01 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 14:20:01 +0200
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-06 14:20:23 +0200
+Processing by SubjectsController#new as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subjects`
+  Rendered subjects/_form.html.erb (1.4ms)
+  Rendered subjects/new.html.erb within layouts/admin (2.8ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 14:20:23 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 14:20:23 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 14:20:23 +0200
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-06 14:21:00 +0200
+Processing by SubjectsController#new as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (1.2ms)
+  Rendered subjects/new.html.erb within layouts/admin (3.1ms)
+Completed 200 OK in 16ms (Views: 15.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 14:21:00 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 14:21:00 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 14:21:00 +0200
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-06 14:21:23 +0200
+Processing by SubjectsController#new as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subjects`
+  Rendered subjects/_form.html.erb (1.8ms)
+  Rendered subjects/new.html.erb within layouts/admin (3.5ms)
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 14:21:23 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 14:21:23 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 14:21:23 +0200
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-06 14:21:32 +0200
+Processing by SubjectsController#new as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (1.1ms)
+  Rendered subjects/new.html.erb within layouts/admin (3.2ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 14:21:32 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 14:21:32 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 14:21:32 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-06 16:18:41 +0200
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (0.3ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4[0m
+  Rendered pages/index.html.erb within layouts/admin (28.6ms)
+Completed 200 OK in 47ms (Views: 27.6ms | ActiveRecord: 13.9ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 16:18:41 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 16:18:41 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 16:18:41 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 16:18:41 +0200
+
+
+Started GET "/pages/edit/3" for ::1 at 2015-04-06 16:18:44 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPage Load (1.9ms)[0m  SELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages`[0m
+  Rendered pages/edit.html.erb within layouts/admin (2.7ms)
+Completed 200 OK in 23ms (Views: 16.4ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 16:18:44 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 16:18:44 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 16:18:44 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-06 16:18:51 +0200
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (0.3ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1
+  [1m[36m (2.6ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4[0m
+  Rendered pages/index.html.erb within layouts/admin (10.2ms)
+Completed 200 OK in 23ms (Views: 19.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 16:18:51 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 16:18:51 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 16:18:51 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 16:18:51 +0200
+
+
+Started GET "/pages/edit/3" for ::1 at 2015-04-06 16:19:45 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPage Load (0.4ms)[0m  SELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages`[0m
+  Rendered pages/edit.html.erb within layouts/admin (1.3ms)
+Completed 200 OK in 18ms (Views: 15.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 16:19:45 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 16:19:45 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 16:19:45 +0200
+
+
+Started GET "/pages/edit/3" for ::1 at 2015-04-06 16:21:26 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages`[0m
+  Rendered pages/edit.html.erb within layouts/admin (1.2ms)
+Completed 200 OK in 20ms (Views: 18.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 16:21:26 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 16:21:26 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 16:21:26 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-06 16:21:29 +0200
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (0.4ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4[0m
+  Rendered pages/index.html.erb within layouts/admin (8.4ms)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 16:21:29 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 16:21:29 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 16:21:29 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 16:21:29 +0200
+
+
+Started GET "/pages/edit/1" for ::1 at 2015-04-06 16:21:31 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPage Load (0.3ms)[0m  SELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages`[0m
+  Rendered pages/edit.html.erb within layouts/admin (1.6ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 16:21:31 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 16:21:31 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 16:21:31 +0200
+
+
+Started GET "/pages/edit/1" for ::1 at 2015-04-06 16:21:43 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPage Load (0.3ms)[0m  SELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages`[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT `subjects`.* FROM `subjects`  ORDER BY position ASC
+  Rendered pages/_form.html.erb (9.6ms)
+  Rendered pages/edit.html.erb within layouts/admin (12.1ms)
+Completed 200 OK in 25ms (Views: 20.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 16:21:43 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 16:21:43 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 16:21:43 +0200
+
+
+Started GET "/pages/edit/1" for ::1 at 2015-04-06 16:22:40 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages`
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT `subjects`.* FROM `subjects`  ORDER BY position ASC[0m
+  Rendered pages/_form.html.erb (3.1ms)
+  Rendered pages/edit.html.erb within layouts/admin (4.9ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 16:22:40 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 16:22:40 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 16:22:40 +0200
+
+
+Started GET "/pages/edit/1" for ::1 at 2015-04-06 16:23:11 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages`[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT `subjects`.* FROM `subjects`  ORDER BY position ASC
+  Rendered pages/_form.html.erb (3.0ms)
+  Rendered pages/edit.html.erb within layouts/admin (4.5ms)
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 16:23:11 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 16:23:11 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 16:23:11 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-06 18:34:30 +0200
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4
+  Rendered pages/index.html.erb within layouts/admin (11.6ms)
+Completed 200 OK in 28ms (Views: 25.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:34:30 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:34:30 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 18:34:30 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:34:30 +0200
+
+
+Started GET "/pages/new" for ::1 at 2015-04-06 18:34:41 +0200
+Processing by PagesController#new as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `pages`[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT `subjects`.* FROM `subjects`  ORDER BY position ASC
+  Rendered pages/_form.html.erb (2.3ms)
+  Rendered pages/new.html.erb within layouts/admin (3.8ms)
+Completed 200 OK in 21ms (Views: 18.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:34:41 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:34:41 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:34:41 +0200
+
+
+Started GET "/pages/new" for ::1 at 2015-04-06 18:35:04 +0200
+Processing by PagesController#new as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages`[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT `subjects`.* FROM `subjects`  ORDER BY position ASC
+  Rendered pages/_form.html.erb (3.3ms)
+  Rendered pages/new.html.erb within layouts/admin (4.9ms)
+Completed 200 OK in 25ms (Views: 23.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:35:04 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:35:04 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:35:04 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-06 18:35:07 +0200
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.6ms)[0m  [1mSELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4
+  Rendered pages/index.html.erb within layouts/admin (11.7ms)
+Completed 200 OK in 25ms (Views: 22.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:35:07 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:35:08 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 18:35:08 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:35:08 +0200
+
+
+Started GET "/pages/edit/3" for ::1 at 2015-04-06 18:35:09 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPage Load (0.5ms)[0m  [1mSELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  SELECT COUNT(*) FROM `pages`
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT `subjects`.* FROM `subjects`  ORDER BY position ASC[0m
+  Rendered pages/_form.html.erb (2.2ms)
+  Rendered pages/edit.html.erb within layouts/admin (4.4ms)
+Completed 200 OK in 22ms (Views: 17.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:35:09 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:35:09 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:35:09 +0200
+
+
+Started GET "/pages/edit/3" for ::1 at 2015-04-06 18:35:18 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPage Load (0.2ms)[0m  SELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 3 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages`[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT `subjects`.* FROM `subjects`  ORDER BY position ASC
+  Rendered pages/_form.html.erb (2.1ms)
+  Rendered pages/edit.html.erb within layouts/admin (4.2ms)
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:35:18 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:35:18 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:35:18 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-06 18:36:07 +0200
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.8ms)[0m  [1mSELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4
+  Rendered pages/index.html.erb within layouts/admin (10.4ms)
+Completed 200 OK in 28ms (Views: 26.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:36:07 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:36:07 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 18:36:07 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:36:07 +0200
+
+
+Started GET "/subjects" for ::1 at 2015-04-06 18:36:10 +0200
+Processing by SubjectsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT `subjects`.* FROM `subjects`  ORDER BY subjects.position ASC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6
+  Rendered subjects/index.html.erb within layouts/admin (10.2ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:36:10 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:36:10 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:36:10 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 18:36:10 +0200
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-06 18:36:13 +0200
+Processing by SubjectsController#new as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (2.6ms)
+  Rendered subjects/new.html.erb within layouts/admin (5.2ms)
+Completed 200 OK in 20ms (Views: 18.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:36:13 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:36:13 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:36:13 +0200
+
+
+Started GET "/subjects" for ::1 at 2015-04-06 18:36:21 +0200
+Processing by SubjectsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subjects`
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT `subjects`.* FROM `subjects`  ORDER BY subjects.position ASC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  [1m[35m (1.1ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  Rendered subjects/index.html.erb within layouts/admin (15.8ms)
+Completed 200 OK in 41ms (Views: 38.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:36:21 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:36:21 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 18:36:21 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:36:21 +0200
+
+
+Started GET "/subjects/edit/1" for ::1 at 2015-04-06 18:36:22 +0200
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSubject Load (0.8ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (1.1ms)
+  Rendered subjects/edit.html.erb within layouts/admin (3.4ms)
+Completed 200 OK in 23ms (Views: 18.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:36:22 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:36:22 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:36:22 +0200
+
+
+Started GET "/subjects/edit/1" for ::1 at 2015-04-06 18:37:03 +0200
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (1.0ms)
+  Rendered subjects/edit.html.erb within layouts/admin (2.6ms)
+Completed 200 OK in 25ms (Views: 23.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:37:03 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:37:03 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:37:03 +0200
+
+
+Started GET "/subjects/edit/1" for ::1 at 2015-04-06 18:37:05 +0200
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (1.2ms)
+  Rendered subjects/edit.html.erb within layouts/admin (2.7ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:37:05 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:37:05 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:37:05 +0200
+
+
+Started GET "/subjects" for ::1 at 2015-04-06 18:37:07 +0200
+Processing by SubjectsController#index as HTML
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `subjects`
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT `subjects`.* FROM `subjects`  ORDER BY subjects.position ASC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  Rendered subjects/index.html.erb within layouts/admin (9.8ms)
+Completed 200 OK in 25ms (Views: 22.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:37:07 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 18:37:07 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:37:07 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:37:07 +0200
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-06 18:37:08 +0200
+Processing by SubjectsController#new as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subjects`
+  Rendered subjects/_form.html.erb (1.8ms)
+  Rendered subjects/new.html.erb within layouts/admin (6.3ms)
+Completed 200 OK in 19ms (Views: 17.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:37:08 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:37:08 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:37:08 +0200
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-06 18:37:17 +0200
+Processing by SubjectsController#new as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (1.4ms)
+  Rendered subjects/new.html.erb within layouts/admin (3.1ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:37:17 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:37:17 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:37:17 +0200
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-06 18:37:34 +0200
+Processing by SubjectsController#new as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `subjects`
+  Rendered subjects/_form.html.erb (3.9ms)
+  Rendered subjects/new.html.erb within layouts/admin (5.9ms)
+Completed 200 OK in 21ms (Views: 19.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:37:34 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:37:34 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:37:34 +0200
+
+
+Started GET "/subjects" for ::1 at 2015-04-06 18:37:37 +0200
+Processing by SubjectsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT `subjects`.* FROM `subjects`  ORDER BY subjects.position ASC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6
+  Rendered subjects/index.html.erb within layouts/admin (8.8ms)
+Completed 200 OK in 25ms (Views: 23.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:37:37 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:37:37 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:37:37 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 18:37:37 +0200
+
+
+Started GET "/subjects/edit/1" for ::1 at 2015-04-06 18:37:39 +0200
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubject Load (0.9ms)[0m  [1mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `subjects`
+  Rendered subjects/_form.html.erb (1.1ms)
+  Rendered subjects/edit.html.erb within layouts/admin (2.6ms)
+Completed 200 OK in 22ms (Views: 18.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:37:39 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:37:39 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:37:39 +0200
+
+
+Started GET "/subjects/edit/1" for ::1 at 2015-04-06 18:37:57 +0200
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mSubject Load (0.4ms)[0m  [1mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subjects`
+  Rendered subjects/_form.html.erb (1.1ms)
+  Rendered subjects/edit.html.erb within layouts/admin (3.3ms)
+Completed 200 OK in 16ms (Views: 14.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:37:57 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:37:57 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:37:57 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-06 18:38:04 +0200
+Processing by SectionsController#index as HTML
+  [1m[36mSection Load (0.3ms)[0m  [1mSELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC[0m
+  Rendered sections/index.html.erb within layouts/admin (6.6ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:38:04 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:38:04 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:38:04 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 18:38:04 +0200
+
+
+Started GET "/sections/new" for ::1 at 2015-04-06 18:38:06 +0200
+Processing by SectionsController#new as HTML
+  Rendered sections/_form.html.erb (2.3ms)
+  Rendered sections/new.html.erb within layouts/admin (4.4ms)
+Completed 200 OK in 20ms (Views: 19.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:38:06 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:38:06 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:38:06 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-06 18:38:09 +0200
+Processing by SectionsController#index as HTML
+  [1m[35mSection Load (0.4ms)[0m  SELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC
+  Rendered sections/index.html.erb within layouts/admin (3.7ms)
+Completed 200 OK in 17ms (Views: 16.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:38:09 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:38:09 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 18:38:09 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:38:09 +0200
+
+
+Started GET "/sections/edit/2" for ::1 at 2015-04-06 18:38:10 +0200
+Processing by SectionsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSection Load (0.5ms)[0m  [1mSELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 2 LIMIT 1[0m
+  Rendered sections/edit.html.erb within layouts/admin (2.3ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:38:10 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:38:10 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:38:10 +0200
+
+
+Started GET "/sections/edit/2" for ::1 at 2015-04-06 18:39:20 +0200
+Processing by SectionsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSection Load (0.3ms)[0m  SELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 2 LIMIT 1
+  Rendered sections/_form.html.erb (1.8ms)
+  Rendered sections/edit.html.erb within layouts/admin (4.2ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:39:20 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:39:20 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:39:20 +0200
+
+
+Started GET "/sections/edit/2" for ::1 at 2015-04-06 18:39:35 +0200
+Processing by SectionsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mSection Load (0.3ms)[0m  [1mSELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 2 LIMIT 1[0m
+  Rendered sections/_form.html.erb (1.5ms)
+  Rendered sections/edit.html.erb within layouts/admin (3.9ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 18:39:35 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 18:39:35 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 18:39:35 +0200
+
+
+Started GET "/subjects" for ::1 at 2015-04-06 19:01:37 +0200
+Processing by SubjectsController#index as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `subjects`
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT `subjects`.* FROM `subjects`  ORDER BY subjects.position ASC[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6[0m
+  Rendered subjects/index.html.erb within layouts/admin (8.6ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:01:37 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:01:37 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:01:37 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:01:37 +0200
+
+
+Started GET "/subjects/edit/2" for ::1 at 2015-04-06 19:01:39 +0200
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSubject Load (0.4ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 2 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (2.6ms)
+  Rendered subjects/edit.html.erb within layouts/admin (6.1ms)
+Completed 200 OK in 25ms (Views: 23.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:01:39 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:01:39 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:01:39 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-06 19:01:47 +0200
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (0.3ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4[0m
+  Rendered pages/index.html.erb within layouts/admin (6.3ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:01:48 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:01:48 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:01:48 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:01:48 +0200
+
+
+Started GET "/pages/edit/3" for ::1 at 2015-04-06 19:01:50 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPage Load (0.3ms)[0m  SELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 3 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `pages`[0m
+  [1m[35mSubject Load (0.6ms)[0m  SELECT `subjects`.* FROM `subjects`  ORDER BY position ASC
+  Rendered pages/_form.html.erb (5.1ms)
+  Rendered pages/edit.html.erb within layouts/admin (7.7ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:01:50 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:01:50 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:01:50 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-06 19:03:12 +0200
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 10 LIMIT 1
+  Rendered pages/index.html.erb within layouts/admin (28.4ms)
+Completed 500 Internal Server Error in 32ms
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    20: 			<% @pages.each do |page| %>
+    21: 			<tr>
+    22: 				<td><%= page.position %></td>
+    23: 				<td><%= page.subject.name %></td>
+    24: 				<td><%= page.name %></td>
+    25: 				<td><%= page.permalink %></td>
+    26: 				<td class="center"><%= status_tag(page.visible) %></td>
+  app/views/pages/index.html.erb:23:in `block in _app_views_pages_index_html_erb___317904079908119118_70349349275780'
+  app/views/pages/index.html.erb:20:in `_app_views_pages_index_html_erb___317904079908119118_70349349275780'
+
+
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.7ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (46.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (35.7ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (80.1ms)
+
+
+Started GET "/pages" for ::1 at 2015-04-06 19:03:45 +0200
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC[0m
+  [1m[35mSubject Load (0.6ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1  [["id", 1]]
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 10 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4[0m
+  Rendered pages/index.html.erb within layouts/admin (10.7ms)
+Completed 200 OK in 22ms (Views: 19.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:03:45 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:03:45 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:03:45 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:03:45 +0200
+
+
+Started GET "/pages/edit/4" for ::1 at 2015-04-06 19:03:50 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPage Load (0.4ms)[0m  SELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 4 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages`[0m
+  [1m[35mSubject Load (0.7ms)[0m  SELECT `subjects`.* FROM `subjects`  ORDER BY position ASC
+  Rendered pages/_form.html.erb (5.4ms)
+  Rendered pages/edit.html.erb within layouts/admin (8.7ms)
+Completed 200 OK in 31ms (Views: 28.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:03:50 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:03:50 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:03:50 +0200
+
+
+Started POST "/pages/update/4" for ::1 at 2015-04-06 19:03:54 +0200
+Processing by PagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W1o+czR6VoIVn0W0r3Knfr+jVHao0iuFN2a8XiXXtY/iyatB1yq5IemT0+cp1ms3FyYuupB/ddnQnqc1FSKhIA==", "page"=>{"subject_id"=>"5", "name"=>"Caperucita", "position"=>"1", "permalink"=>"El link", "visible"=>"1"}, "commit"=>"Update Page", "id"=>"4"}
+  [1m[36mPage Load (1.0ms)[0m  [1mSELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 4 LIMIT 1[0m
+  [1m[35m (6.3ms)[0m  BEGIN
+  [1m[36mSQL (20.7ms)[0m  [1mUPDATE `pages` SET `subject_id` = 5, `position` = 1, `updated_at` = '2015-04-06 17:03:54.473088' WHERE `pages`.`id` = 4[0m
+  [1m[35m (33.7ms)[0m  COMMIT
+Redirected to http://localhost:3000/pages/show/4
+Completed 302 Found in 72ms (ActiveRecord: 61.7ms)
+
+
+Started GET "/pages/show/4" for ::1 at 2015-04-06 19:03:54 +0200
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPage Load (0.5ms)[0m  [1mSELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 4 LIMIT 1[0m
+  Rendered pages/show.html.erb within layouts/admin (0.8ms)
+Completed 200 OK in 17ms (Views: 15.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:03:54 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:03:54 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:03:54 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-06 19:03:56 +0200
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (0.3ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1
+  Rendered pages/index.html.erb within layouts/admin (11.2ms)
+Completed 200 OK in 25ms (Views: 23.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:03:56 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:03:56 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:03:56 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:03:56 +0200
+
+
+Started GET "/pages/edit/3" for ::1 at 2015-04-06 19:03:59 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mPage Load (1.1ms)[0m  [1mSELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 3 LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `pages`
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT `subjects`.* FROM `subjects`  ORDER BY position ASC[0m
+  Rendered pages/_form.html.erb (2.4ms)
+  Rendered pages/edit.html.erb within layouts/admin (4.1ms)
+Completed 200 OK in 21ms (Views: 16.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:03:59 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:03:59 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:03:59 +0200
+
+
+Started POST "/pages/update/3" for ::1 at 2015-04-06 19:04:02 +0200
+Processing by PagesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Pifi/496yYfiFB+kozmntFYcsxnBcvV5D02SnqZ/bC6HtHfNbComJB4YifclnWv9/pnJ1fnfqyXotYn1lop4gQ==", "page"=>{"subject_id"=>"6", "name"=>"Segunda pagina", "position"=>"2", "permalink"=>"Segunda", "visible"=>"0"}, "commit"=>"Update Page", "id"=>"3"}
+  [1m[35mPage Load (0.3ms)[0m  SELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 3 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE `pages` SET `subject_id` = 6, `updated_at` = '2015-04-06 17:04:02.435297' WHERE `pages`.`id` = 3
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/pages/show/3
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/pages/show/3" for ::1 at 2015-04-06 19:04:02 +0200
+Processing by PagesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPage Load (1.0ms)[0m  SELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 3 LIMIT 1
+  Rendered pages/show.html.erb within layouts/admin (0.4ms)
+Completed 200 OK in 18ms (Views: 15.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:04:02 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:04:02 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:04:02 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-06 19:04:04 +0200
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (2.1ms)[0m  [1mSELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC[0m
+  [1m[35mSubject Load (0.8ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 6 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1[0m
+  Rendered pages/index.html.erb within layouts/admin (14.9ms)
+Completed 200 OK in 37ms (Views: 32.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:04:04 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:04:04 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:04:04 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:04:04 +0200
+
+
+Started GET "/pages/edit/3" for ::1 at 2015-04-06 19:04:15 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mPage Load (0.3ms)[0m  SELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 3 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `pages`[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT `subjects`.* FROM `subjects`  ORDER BY position ASC
+  Rendered pages/_form.html.erb (2.5ms)
+  Rendered pages/edit.html.erb within layouts/admin (4.3ms)
+Completed 200 OK in 21ms (Views: 18.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:04:15 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:04:15 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:04:15 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-06 19:04:21 +0200
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 6 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1[0m
+  Rendered pages/index.html.erb within layouts/admin (10.6ms)
+Completed 200 OK in 26ms (Views: 23.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:04:21 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:04:21 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:04:21 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:04:21 +0200
+
+
+Started GET "/pages/edit/1" for ::1 at 2015-04-06 19:04:25 +0200
+Processing by PagesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mPage Load (0.9ms)[0m  SELECT  `pages`.* FROM `pages` WHERE `pages`.`id` = 1 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `pages`[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT `subjects`.* FROM `subjects`  ORDER BY position ASC
+  Rendered pages/_form.html.erb (2.2ms)
+  Rendered pages/edit.html.erb within layouts/admin (3.9ms)
+Completed 200 OK in 21ms (Views: 17.2ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:04:25 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:04:25 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:04:25 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-06 19:04:27 +0200
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC[0m
+  [1m[35mSubject Load (0.7ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 6 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1[0m
+  Rendered pages/index.html.erb within layouts/admin (12.4ms)
+Completed 200 OK in 39ms (Views: 35.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:04:27 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:04:27 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:04:27 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:04:27 +0200
+
+
+Started GET "/sections/edit/2" for ::1 at 2015-04-06 19:04:40 +0200
+Processing by SectionsController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mSection Load (0.2ms)[0m  SELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 2 LIMIT 1
+  Rendered sections/_form.html.erb (2.0ms)
+  Rendered sections/edit.html.erb within layouts/admin (4.4ms)
+Completed 200 OK in 18ms (Views: 17.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:04:40 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:04:40 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:04:40 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-06 19:04:42 +0200
+Processing by SectionsController#index as HTML
+  [1m[36mSection Load (0.7ms)[0m  [1mSELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC[0m
+  Rendered sections/index.html.erb within layouts/admin (3.8ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:04:42 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:04:42 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:04:42 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:04:42 +0200
+
+
+Started GET "/sections/edit/3" for ::1 at 2015-04-06 19:04:49 +0200
+Processing by SectionsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mSection Load (0.3ms)[0m  SELECT  `sections`.* FROM `sections` WHERE `sections`.`id` = 3 LIMIT 1
+  Rendered sections/_form.html.erb (3.0ms)
+  Rendered sections/edit.html.erb within layouts/admin (6.2ms)
+Completed 200 OK in 22ms (Views: 21.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:04:49 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:04:49 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:04:49 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-06 19:04:57 +0200
+Processing by SectionsController#index as HTML
+  [1m[36mSection Load (0.3ms)[0m  [1mSELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC[0m
+  Rendered sections/index.html.erb within layouts/admin (2.7ms)
+Completed 200 OK in 20ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:04:57 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:04:57 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:04:57 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:04:57 +0200
+
+
+Started GET "/sections/new" for ::1 at 2015-04-06 19:05:07 +0200
+Processing by SectionsController#new as HTML
+  Rendered sections/_form.html.erb (6.8ms)
+  Rendered sections/new.html.erb within layouts/admin (8.9ms)
+Completed 200 OK in 26ms (Views: 25.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:05:07 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:05:07 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:05:07 +0200
+
+
+Started GET "/pages/new" for ::1 at 2015-04-06 19:10:56 +0200
+Processing by PagesController#new as HTML
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `pages`
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT `subjects`.* FROM `subjects`  ORDER BY position ASC[0m
+  Rendered pages/_form.html.erb (3.0ms)
+  Rendered pages/new.html.erb within layouts/admin (5.2ms)
+Completed 200 OK in 24ms (Views: 20.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:10:57 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:10:57 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:10:57 +0200
+
+
+Started GET "/sections/new" for ::1 at 2015-04-06 19:14:30 +0200
+Processing by SectionsController#new as HTML
+  [1m[35mPage Load (0.3ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY position ASC
+  Rendered sections/_form.html.erb (26.0ms)
+  Rendered sections/new.html.erb within layouts/admin (28.4ms)
+Completed 200 OK in 78ms (Views: 25.0ms | ActiveRecord: 37.5ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:14:30 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:14:30 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:14:30 +0200
+
+
+Started GET "/sections/new" for ::1 at 2015-04-06 19:14:50 +0200
+Processing by SectionsController#new as HTML
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT `pages`.* FROM `pages`  ORDER BY position ASC[0m
+  Rendered sections/_form.html.erb (5.2ms)
+  Rendered sections/new.html.erb within layouts/admin (7.0ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:14:50 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:14:50 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:14:50 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-06 19:15:19 +0200
+Processing by SectionsController#index as HTML
+  [1m[35mSection Load (0.4ms)[0m  SELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC
+  Rendered sections/index.html.erb within layouts/admin (4.0ms)
+Completed 200 OK in 23ms (Views: 21.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:15:19 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:15:19 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:15:19 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:15:19 +0200
+
+
+Started GET "/sections/new" for ::1 at 2015-04-06 19:15:20 +0200
+Processing by SectionsController#new as HTML
+  [1m[36mPage Load (0.2ms)[0m  [1mSELECT `pages`.* FROM `pages`  ORDER BY position ASC[0m
+  Rendered sections/_form.html.erb (3.1ms)
+  Rendered sections/new.html.erb within layouts/admin (5.6ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:15:20 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:15:20 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:15:20 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-06 19:15:23 +0200
+Processing by SectionsController#index as HTML
+  [1m[35mSection Load (0.5ms)[0m  SELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC
+  Rendered sections/index.html.erb within layouts/admin (6.2ms)
+Completed 200 OK in 29ms (Views: 28.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:15:23 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:15:23 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:15:23 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:15:23 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-06 19:15:25 +0200
+Processing by PagesController#index as HTML
+  [1m[36mPage Load (0.4ms)[0m  [1mSELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 6 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1[0m
+  Rendered pages/index.html.erb within layouts/admin (31.4ms)
+Completed 200 OK in 62ms (Views: 57.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:15:25 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:15:25 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:15:25 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:15:25 +0200
+
+
+Started GET "/pages/new" for ::1 at 2015-04-06 19:15:26 +0200
+Processing by PagesController#new as HTML
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `pages`
+  [1m[36mSubject Load (0.4ms)[0m  [1mSELECT `subjects`.* FROM `subjects`  ORDER BY position ASC[0m
+  Rendered pages/_form.html.erb (5.1ms)
+  Rendered pages/new.html.erb within layouts/admin (8.4ms)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:15:26 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:15:26 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:15:26 +0200
+
+
+Started GET "/pages" for ::1 at 2015-04-06 19:15:28 +0200
+Processing by PagesController#index as HTML
+  [1m[35mPage Load (0.4ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY pages.position ASC
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 4
+  [1m[36mSubject Load (0.6ms)[0m  [1mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 6 LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 3
+  [1m[36mSubject Load (0.2ms)[0m  [1mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 1 LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `sections` WHERE `sections`.`page_id` = 1
+  Rendered pages/index.html.erb within layouts/admin (14.6ms)
+Completed 200 OK in 30ms (Views: 27.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:15:28 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:15:28 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:15:28 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:15:28 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-06 19:15:30 +0200
+Processing by SectionsController#index as HTML
+  [1m[36mSection Load (1.0ms)[0m  [1mSELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC[0m
+  Rendered sections/index.html.erb within layouts/admin (5.1ms)
+Completed 200 OK in 30ms (Views: 28.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:15:30 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:15:30 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:15:30 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:15:30 +0200
+
+
+Started GET "/sections/new" for ::1 at 2015-04-06 19:15:32 +0200
+Processing by SectionsController#new as HTML
+  [1m[35mPage Load (0.5ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY position ASC
+  Rendered sections/_form.html.erb (5.3ms)
+  Rendered sections/new.html.erb within layouts/admin (8.6ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:15:32 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:15:32 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:15:32 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-06 19:15:37 +0200
+Processing by SectionsController#index as HTML
+  [1m[36mSection Load (0.7ms)[0m  [1mSELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC[0m
+  Rendered sections/index.html.erb within layouts/admin (14.9ms)
+Completed 200 OK in 31ms (Views: 30.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:15:37 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:15:37 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:15:37 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:15:37 +0200
+
+
+Started GET "/sections/new" for ::1 at 2015-04-06 19:16:02 +0200
+Processing by SectionsController#new as HTML
+  [1m[35mPage Load (0.6ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY position ASC
+  Rendered sections/_form.html.erb (23.8ms)
+  Rendered sections/new.html.erb within layouts/admin (25.0ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (undefined method `chex_box' for #<ActionView::Helpers::FormBuilder:0x007ff6f7f0a938>):
+    22: 		<%= f.text_field(:content, :class => 'form-control') %>
+    23: 
+    24: 		<%= f.label(:visible) %>
+    25: 		<%= f.chex_box(:visible, :class => 'form-control') %>
+    26: 
+    27: </div>
+    28: </div>
+  app/views/sections/_form.html.erb:25:in `_app_views_sections__form_html_erb___4309559006276227914_70349349209960'
+  app/views/sections/new.html.erb:11:in `block in _app_views_sections_new_html_erb__567904848645249706_70349314260460'
+  app/views/sections/new.html.erb:9:in `_app_views_sections_new_html_erb__567904848645249706_70349314260460'
+
+
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.9ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.0ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (33.2ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (74.2ms)
+
+
+Started GET "/sections/new" for ::1 at 2015-04-06 19:16:12 +0200
+Processing by SectionsController#new as HTML
+  [1m[36mPage Load (0.5ms)[0m  [1mSELECT `pages`.* FROM `pages`  ORDER BY position ASC[0m
+  Rendered sections/_form.html.erb (5.4ms)
+  Rendered sections/new.html.erb within layouts/admin (7.7ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:16:12 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:16:12 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:16:12 +0200
+
+
+Started GET "/sections/new" for ::1 at 2015-04-06 19:16:29 +0200
+Processing by SectionsController#new as HTML
+  [1m[35mPage Load (0.3ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY position ASC
+  Rendered sections/_form.html.erb (2.6ms)
+  Rendered sections/new.html.erb within layouts/admin (4.1ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:16:29 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:16:29 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:16:29 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-06 19:16:31 +0200
+Processing by SectionsController#index as HTML
+  [1m[36mSection Load (0.4ms)[0m  [1mSELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC[0m
+  Rendered sections/index.html.erb within layouts/admin (4.5ms)
+Completed 200 OK in 18ms (Views: 16.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:16:32 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:16:32 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:16:32 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:16:32 +0200
+
+
+Started GET "/sections/new" for ::1 at 2015-04-06 19:16:40 +0200
+Processing by SectionsController#new as HTML
+  [1m[35mPage Load (0.4ms)[0m  SELECT `pages`.* FROM `pages`  ORDER BY position ASC
+  Rendered sections/_form.html.erb (3.9ms)
+  Rendered sections/new.html.erb within layouts/admin (6.3ms)
+Completed 200 OK in 18ms (Views: 17.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:16:40 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:16:40 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:16:40 +0200
+
+
+Started GET "/pages/new" for ::1 at 2015-04-06 19:16:45 +0200
+Processing by PagesController#new as HTML
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM `pages`[0m
+  [1m[35mSubject Load (0.3ms)[0m  SELECT `subjects`.* FROM `subjects`  ORDER BY position ASC
+  Rendered pages/_form.html.erb (3.5ms)
+  Rendered pages/new.html.erb within layouts/admin (5.2ms)
+Completed 200 OK in 22ms (Views: 20.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:16:45 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:16:45 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:16:45 +0200
+
+
+Started GET "/sections/new" for ::1 at 2015-04-06 19:16:48 +0200
+Processing by SectionsController#new as HTML
+  [1m[36mPage Load (0.3ms)[0m  [1mSELECT `pages`.* FROM `pages`  ORDER BY position ASC[0m
+  Rendered sections/_form.html.erb (5.0ms)
+  Rendered sections/new.html.erb within layouts/admin (7.5ms)
+Completed 200 OK in 32ms (Views: 29.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:16:48 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:16:48 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:16:48 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-06 19:16:56 +0200
+Processing by SectionsController#index as HTML
+  [1m[35mSection Load (0.2ms)[0m  SELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC
+  Rendered sections/index.html.erb within layouts/admin (2.5ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:16:56 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:16:56 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:16:56 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:16:56 +0200
+
+
+Started GET "/subjects" for ::1 at 2015-04-06 19:16:58 +0200
+Processing by SubjectsController#index as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  [1m[35mSubject Load (0.2ms)[0m  SELECT `subjects`.* FROM `subjects`  ORDER BY subjects.position ASC
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6
+  Rendered subjects/index.html.erb within layouts/admin (10.4ms)
+Completed 200 OK in 23ms (Views: 21.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:16:58 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:16:58 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-06 19:16:58 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:16:58 +0200
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-06 19:17:00 +0200
+Processing by SubjectsController#new as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (2.3ms)
+  Rendered subjects/new.html.erb within layouts/admin (4.8ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-06 19:17:00 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-06 19:17:00 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:17:00 +0200

@@ -8,35 +8,10 @@
 
 		<%= form_for(:page, :url => {:action => 'update', :id => @page.id}) do |f| %>
 
-			<div class="label">Subject ID</div>
-			<div class="form-control">
-				<%= f.text_field(:subject_id) %>
-			</div>
+			<%= render(:partial => "form", :locals => {:f => f}) %>
 
-			<div class="label">Name</div>
-			<div class="form-control">
-				<%= f.text_field(:name) %>
-			</div>
-
-			<div class="label">Position</div>
-			<div class="form-control">
-				<%= f.text_field(:position) %>
-			</div>
-
-			<div class="label">Permalink</div>
-			<div class="form-control">
-				<%= f.text_field(:permalink) %>
-			</div>
-
-
-			<div class="label">Visible</div>
-			<div class="form-control">
-				<%= f.text_field(:visible) %>
-			</div>
-
-			<div class="btn form-buttons">
-				<%= submit_tag("Update Page") %>
-			</div>
+			<br>
+			<%= submit_tag("Update Page", :class => 'btn btn-success') %>
 		<% end %>
 
 

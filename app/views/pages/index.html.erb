@@ -1,14 +1,16 @@
 <div class="container">
 	<div class="page index">
-		<h2 class="text-center">Subjects</h2>
-
-		<%= link_to("Add New Page", {:action => 'new'}, :class => 'action new') %>
+		<h2 class="text-center">Pages</h2>
+		
+		<br>
+		<%= link_to(image_tag('new.jpg', :size => '20x20', :alt => '+') + "Add New Page", {:action => 'new'}, :class => 'action new') %>
+		<br>
 
 		<table class="table" sumamry="Page list">
 			<tr class="header">
 				
 				<th>Position</th>
-				<th>Subject ID</th>
+				<th>Subject</th>
 				<th>Page</th>
 				<th>Permalink</th>
 				<th>Visible</th>
@@ -18,7 +20,7 @@
 			<% @pages.each do |page| %>
 			<tr>
 				<td><%= page.position %></td>
-				<td><%= page.subject_id %></td>
+				<td><%= page.subject.name if page.subject %></td>
 				<td><%= page.name %></td>
 				<td><%= page.permalink %></td>
 				<td class="center"><%= status_tag(page.visible) %></td>

@@ -6,44 +6,13 @@
 		
 		<h2 class="text-center">Edit Section</h2>
 
-		<%= form_for(:section, :url => {:action => 'update', :id => @section.id}) do |f| %>
-
-			<div class="label">Page ID</div>
-			<div class="form-control">
-				<%= f.text_field(:page_id) %>
-			</div>		
+		<%= form_for(:section, :url => {:action => 'update', :id => @section.id}) do |f| %>		
 	
 
-			<div class="label">Name</div>
-			<div class="form-control">
-				<%= f.text_field(:name) %>
-			</div>
+			<%= render(:partial => "form", :locals => {:f => f}) %>
 
-			<div class="label">Position</div>
-			<div class="form-control">
-				<%= f.text_field(:position) %>
-			</div>
-
-			<div class="label">Content Type</div>
-			<div class="form-control">
-				<%= f.text_field(:content_type) %>
-			</div>
-
-			<div class="label">Content</div>
-			<div class="form-control">
-				<%= f.text_field(:content) %>
-			</div>
-
-
-
-			<div class="label">Visible</div>
-			<div class="form-control">
-				<%= f.text_field(:visible) %>
-			</div>
-
-			<div class="btn form-buttons">
-				<%= submit_tag("Update Section") %>
-			</div>
+			<br>
+			<%= submit_tag("Update Section", :class => 'btn btn-success') %>
 		<% end %>
 
 

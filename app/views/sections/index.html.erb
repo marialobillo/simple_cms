@@ -1,9 +1,11 @@
 
 <div class="container">
 	<div class="subject index">
-		<h2 class="text-center">Subjects</h2>
+		<h2 class="text-center">Sections</h2>
 
-		<%= link_to("Add New Section", {:action => 'new'}, :class => 'action new') %>
+		<br>
+		<%= link_to(image_tag('new.jpg', :size => '20x20', :alt => '+') + "Add New Section", {:action => 'new'}, :class => 'action new') %>
+		<br>
 
 		<table class="table" sumamry="Section list">
 			<tr class="header">

@@ -8,6 +8,10 @@
 	
 	<h1 class="text-center">Simple CMS | <%= @page_title || "Admin" %></h1>
 
+	
+
+<div class="container">
+
 	<div class="row">
 		
 		<% if ! flash[:notice].blank? %>
@@ -16,8 +20,6 @@
 			</div>
 		<% end %>
 	</div>
-
-<div class="container">
 
 	<!-- before yield -->
 
