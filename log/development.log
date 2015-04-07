@@ -7057,3 +7057,329 @@ Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for 
 
 
 Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-06 19:17:00 +0200
+
+
+Started GET "/sections" for ::1 at 2015-04-07 11:31:29 +0200
+Processing by SectionsController#index as HTML
+  [1m[35mSection Load (37.6ms)[0m  SELECT `sections`.* FROM `sections`  ORDER BY sections.position ASC
+  Rendered sections/index.html.erb within layouts/admin (52.1ms)
+Completed 200 OK in 91ms (Views: 47.8ms | ActiveRecord: 37.6ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-07 11:31:30 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-07 11:31:30 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-07 11:31:30 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-07 11:31:30 +0200
+
+
+Started GET "/subjects" for ::1 at 2015-04-07 11:31:34 +0200
+Processing by SubjectsController#index as HTML
+  [1m[36m (5.7ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  [1m[35mSubject Load (0.5ms)[0m  SELECT `subjects`.* FROM `subjects`  ORDER BY subjects.position ASC
+  [1m[36m (12.9ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6
+  Rendered subjects/index.html.erb within layouts/admin (33.9ms)
+Completed 200 OK in 50ms (Views: 29.8ms | ActiveRecord: 19.9ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-07 11:31:34 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-07 11:31:34 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-07 11:31:34 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-07 11:31:34 +0200
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-07 11:31:36 +0200
+Processing by SubjectsController#new as HTML
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (34.3ms)
+  Rendered subjects/new.html.erb within layouts/admin (37.8ms)
+Completed 200 OK in 62ms (Views: 58.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-07 11:31:36 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-07 11:31:36 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-07 11:31:36 +0200
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-07 11:41:24 +0200
+Processing by SubjectsController#new as HTML
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `subjects`
+  Rendered subjects/_form.html.erb (4.3ms)
+  Rendered subjects/new.html.erb within layouts/admin (6.0ms)
+Completed 200 OK in 22ms (Views: 20.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-07 11:41:24 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-07 11:41:24 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-07 11:41:24 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-07 11:41:45 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-07 11:41:45 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-07 11:41:45 +0200
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-07 11:45:02 +0200
+Processing by SubjectsController#new as HTML
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (3.9ms)
+  Rendered subjects/new.html.erb within layouts/admin (9.2ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-07 11:45:02 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-07 11:45:02 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-07 11:45:02 +0200
+
+
+Started GET "/subjects/new" for ::1 at 2015-04-07 11:45:26 +0200
+Processing by SubjectsController#new as HTML
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `subjects`
+  Rendered subjects/_form.html.erb (4.3ms)
+  Rendered subjects/new.html.erb within layouts/admin (6.3ms)
+Completed 200 OK in 19ms (Views: 17.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-07 11:45:26 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-07 11:45:26 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-07 11:45:26 +0200
+
+
+Started POST "/subjects/create" for ::1 at 2015-04-07 18:19:43 +0200
+Processing by SubjectsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"t+fx+UtbyTf9sjhBpDM3FOjZ2eSNyL8r0h3lR4b4QVwOdGTLqAsmlAG+rhIil/tdQFyjKLVl4Xc15f4stg1V8w==", "subject"=>{"name"=>"Default", "position"=>"1", "visible"=>"0", "created_at(3i)"=>"7", "created_at(2i)"=>"4", "created_at(1i)"=>"2014", "created_at(4i)"=>"09", "created_at(5i)"=>"45"}, "commit"=>"Create Subject"}
+  [1m[36m (6.5ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (42.7ms)[0m  INSERT INTO `subjects` (`name`, `position`, `created_at`, `updated_at`) VALUES ('Default', 1, '2014-04-07 09:45:00.000000', '2015-04-07 16:19:43.280114')
+  [1m[36m (27.7ms)[0m  [1mCOMMIT[0m
+Redirected to http://localhost:3000/subjects
+Completed 302 Found in 183ms (ActiveRecord: 160.2ms)
+
+
+Started GET "/subjects" for ::1 at 2015-04-07 18:19:43 +0200
+Processing by SubjectsController#index as HTML
+  [1m[35m (6.4ms)[0m  SELECT COUNT(*) FROM `subjects`
+  [1m[36mSubject Load (6.3ms)[0m  [1mSELECT `subjects`.* FROM `subjects`  ORDER BY subjects.position ASC[0m
+  [1m[35m (2.6ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 7[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6
+  Rendered subjects/index.html.erb within layouts/admin (64.6ms)
+Completed 200 OK in 87ms (Views: 44.6ms | ActiveRecord: 41.5ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-07 18:19:43 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-07 18:19:43 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-07 18:19:43 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-07 18:19:43 +0200
+
+
+Started GET "/subjects/edit/7" for ::1 at 2015-04-07 18:19:49 +0200
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSubject Load (17.7ms)[0m  [1mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM `subjects`
+  Rendered subjects/_form.html.erb (6.3ms)
+  Rendered subjects/edit.html.erb within layouts/admin (9.4ms)
+Completed 200 OK in 46ms (Views: 24.4ms | ActiveRecord: 18.5ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-07 18:19:49 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-07 18:19:49 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-07 18:19:49 +0200
+
+
+Started POST "/subjects/update/7" for ::1 at 2015-04-07 18:19:58 +0200
+Processing by SubjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PJeCWp1Ma7hZD9y01QV9MN7o2//TJGtFicq0yxjlKEGFBBdofhyEG6UDSudTobF5dm2hM+uJNRluMq+gKBA87g==", "subject"=>{"name"=>"Python", "position"=>"1", "visible"=>"0", "created_at(3i)"=>"7", "created_at(2i)"=>"4", "created_at(1i)"=>"2014", "created_at(4i)"=>"09", "created_at(5i)"=>"45"}, "commit"=>"Update Subject", "id"=>"7"}
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 7 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (13.3ms)[0m  [1mUPDATE `subjects` SET `name` = 'Python', `updated_at` = '2015-04-07 16:19:58.990348' WHERE `subjects`.`id` = 7[0m
+  [1m[35m (9.5ms)[0m  COMMIT
+Redirected to http://localhost:3000/subjects/show/7
+Completed 302 Found in 31ms (ActiveRecord: 23.2ms)
+
+
+Started GET "/subjects/show/7" for ::1 at 2015-04-07 18:19:59 +0200
+Processing by SubjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 7 LIMIT 1[0m
+  Rendered subjects/show.html.erb within layouts/admin (2.9ms)
+Completed 200 OK in 22ms (Views: 21.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-07 18:19:59 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-07 18:19:59 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-07 18:19:59 +0200
+
+
+Started GET "/subjects" for ::1 at 2015-04-07 18:20:01 +0200
+Processing by SubjectsController#index as HTML
+  [1m[35m (1.8ms)[0m  SELECT COUNT(*) FROM `subjects`
+  [1m[36mSubject Load (0.4ms)[0m  [1mSELECT `subjects`.* FROM `subjects`  ORDER BY subjects.position ASC[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 7[0m
+  [1m[35m (0.2ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 2
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 5[0m
+  [1m[35m (0.3ms)[0m  SELECT COUNT(*) FROM `pages` WHERE `pages`.`subject_id` = 6
+  Rendered subjects/index.html.erb within layouts/admin (17.2ms)
+Completed 200 OK in 39ms (Views: 27.8ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-07 18:20:01 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-07 18:20:01 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-07 18:20:01 +0200
+
+
+Started GET "/assets/new-e758199fc96f4891bf9773b92b61a0b0.jpg" for ::1 at 2015-04-07 18:20:01 +0200
+
+
+Started GET "/subjects/show/7" for ::1 at 2015-04-07 18:36:00 +0200
+Processing by SubjectsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mSubject Load (0.3ms)[0m  [1mSELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 7 LIMIT 1[0m
+  Rendered subjects/show.html.erb within layouts/admin (0.5ms)
+Completed 200 OK in 19ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-07 18:36:00 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-07 18:36:00 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-07 18:36:00 +0200
+
+
+Started GET "/subjects/edit/5" for ::1 at 2015-04-07 18:59:04 +0200
+Processing by SubjectsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSubject Load (0.2ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (4.1ms)
+  Rendered subjects/edit.html.erb within layouts/admin (6.2ms)
+Completed 200 OK in 55ms (Views: 21.9ms | ActiveRecord: 24.6ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-07 18:59:04 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-07 18:59:04 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-07 18:59:04 +0200
+
+
+Started POST "/subjects/update/5" for ::1 at 2015-04-07 18:59:10 +0200
+Processing by SubjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2it9l6E7TnkzAdv9Hh49SCo8uAQm3iNSJ2ti4tPIfaVjuOilQmuh2s8NTa6YuvEBgrnCyB5zfQ7Ak3mJ4z1pCg==", "subject"=>{"name"=>"", "position"=>"3", "visible"=>"1", "created_at(3i)"=>"29", "created_at(2i)"=>"3", "created_at(1i)"=>"2015", "created_at(4i)"=>"18", "created_at(5i)"=>"00"}, "commit"=>"Update Subject", "id"=>"5"}
+  [1m[35mSubject Load (0.3ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (21.8ms)
+  Rendered subjects/edit.html.erb within layouts/admin (24.8ms)
+Completed 200 OK in 65ms (Views: 45.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-07 18:59:10 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-07 18:59:10 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-07 18:59:10 +0200
+
+
+Started POST "/subjects/update/5" for ::1 at 2015-04-07 18:59:12 +0200
+Processing by SubjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uFI0wh/E5aRrjGdhocEhx+WIKhMOye6ZJCBWdR5UGMwBwaHw/JQKB5eA8TInZe2OTQ1Q3zZksMXD2E0eLqEMYw==", "subject"=>{"name"=>"", "position"=>"3", "visible"=>"1", "created_at(3i)"=>"29", "created_at(2i)"=>"3", "created_at(1i)"=>"2015", "created_at(4i)"=>"18", "created_at(5i)"=>"00"}, "commit"=>"Update Subject", "id"=>"5"}
+  [1m[35mSubject Load (0.3ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (6.0ms)
+  Rendered subjects/edit.html.erb within layouts/admin (10.4ms)
+Completed 200 OK in 32ms (Views: 27.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-07 18:59:12 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-07 18:59:12 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-07 18:59:12 +0200
+
+
+Started POST "/subjects/update/5" for ::1 at 2015-04-07 18:59:13 +0200
+Processing by SubjectsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iS+HqkxqZ+X+EiDt1L1/4ym90ePEk+Hxmxb1aio0EuEwvBKYrzqIRgIetr5SGbOqgTirL/w+v6187u4BGsEGTg==", "subject"=>{"name"=>"", "position"=>"3", "visible"=>"1", "created_at(3i)"=>"29", "created_at(2i)"=>"3", "created_at(1i)"=>"2015", "created_at(4i)"=>"18", "created_at(5i)"=>"00"}, "commit"=>"Update Subject", "id"=>"5"}
+  [1m[35mSubject Load (0.3ms)[0m  SELECT  `subjects`.* FROM `subjects` WHERE `subjects`.`id` = 5 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mSELECT COUNT(*) FROM `subjects`[0m
+  Rendered subjects/_form.html.erb (5.1ms)
+  Rendered subjects/edit.html.erb within layouts/admin (7.0ms)
+Completed 200 OK in 28ms (Views: 23.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-07 18:59:13 +0200
+
+
+Started GET "/assets/application-a55efca4db46db44ccb6d8ef761b7689.css?body=1" for ::1 at 2015-04-07 18:59:13 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-07 18:59:13 +0200
