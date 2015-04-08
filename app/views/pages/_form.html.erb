@@ -1,8 +1,18 @@
 <div class="row">
+	<div class="col-md-9">
+			<%= error_messages_for(@page) %>
+
+	</div>
+</div>
+
+<div class="row">
 	<div class="col-md-6">
 
-		<%= f.label(:subject_id, "Subject") %>
+		
+		<div class="form-group">
+			<%= f.label(:subject_id, "Subject") %>
 		<%= f.select(:subject_id, @subjects.map {|s| [s.name, s.id]}, :class => 'form-control') %>
+		</div>
 
 		<div class="form-group">
 			<%= f.label(:name, "Name") %>
