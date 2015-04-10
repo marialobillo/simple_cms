@@ -4,8 +4,7 @@ class Subject < ActiveRecord::Base
 	has_many :pages
 
 
-	validates_presence_of :name
-	validates_length_of :name, :maximum => 50
+	validates :name, :presence => true, :length => { :maximum => 50 }
 
 
 	scope :visible, lambda { where(:visible => true )}
