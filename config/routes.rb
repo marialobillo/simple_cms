@@ -2,6 +2,10 @@ Rails.application.routes.draw do
 
 
 
+  get 'access/index'
+
+  get 'access/loggin'
+
   root "demo#index"
 
   #get "demo/index"

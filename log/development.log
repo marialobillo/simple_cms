@@ -8376,3 +8376,71 @@ Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for 
 
 
 Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-10 13:38:46 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (1.7ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Migrating to AddPasswordDigestToAdminUsers (20150412182711)
+  [1m[35m (66.6ms)[0m  ALTER TABLE `admin_users` DROP `hashed_password`
+  [1m[36m (12.2ms)[0m  [1mALTER TABLE `admin_users` ADD `password_digest` varchar(255)[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (12.3ms)[0m  [1mINSERT INTO `schema_migrations` (`version`) VALUES ('20150412182711')[0m
+  [1m[35m (5.9ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+  [1m[35m (1.0ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'simple_cms_development'
+  AND fk.table_name = 'admin_users'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `admin_users`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'simple_cms_development'
+  AND fk.table_name = 'admin_users_pages'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `admin_users_pages`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'simple_cms_development'
+  AND fk.table_name = 'pages'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `pages`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'simple_cms_development'
+  AND fk.table_name = 'section_edits'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `section_edits`[0m
+  [1m[35m (0.2ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'simple_cms_development'
+  AND fk.table_name = 'sections'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `sections`[0m
+  [1m[35m (0.1ms)[0m  SELECT fk.referenced_table_name as 'to_table'
+      ,fk.referenced_column_name as 'primary_key'
+      ,fk.column_name as 'column'
+      ,fk.constraint_name as 'name'
+FROM information_schema.key_column_usage fk
+WHERE fk.referenced_column_name is not null
+  AND fk.table_schema = 'simple_cms_development'
+  AND fk.table_name = 'subjects'
+
+  [1m[36m (0.1ms)[0m  [1mSHOW CREATE TABLE `subjects`[0m
