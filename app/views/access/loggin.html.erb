@@ -1,2 +1,21 @@
-<h1>Access#loggin</h1>
-<p>Find me in app/views/access/loggin.html.erb</p>
+<% @page_title = "Admin Login" %>
+
+<div class="row">
+	<div class="col-md-8">
+		<div class="login">
+			<% form_tag(:action => 'attempt_login') do %>
+			<div class="form-group">
+				<% label_tag(:username) %>
+				<% text_field_tag(:username) %>
+			</div>
+			<div class="form-group">
+				<% label_tag(:password) %>
+				<% password_field_tag(:password) %>
+			</div>
+			<div class="form-group">
+				<% submit_tag("Log In", :class => 'btn btn-success')%>
+			</div>
+			<% end %>
+		</div>
+	</div>
+</div>
