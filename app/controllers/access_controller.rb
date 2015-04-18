@@ -5,7 +5,7 @@ class AccessController < ApplicationController
   before_action :confirm_logged_in, :except => [:login, :attempt_login, :logout]
 
   def index
-
+    render('index')
   end
 
   def loggin
@@ -25,7 +25,7 @@ class AccessController < ApplicationController
   		flash[:notice] = "You are now logged in."
   		redirect_to(:action => 'index')
   	end
-  		flash[:notice] = "Invalid username/passoword combination."
+  		flash[:notice] = "Invalid username/password combination."
   		redirect_to(:action => 'login')
   end
 

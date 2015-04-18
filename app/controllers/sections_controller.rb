@@ -14,8 +14,9 @@ class SectionsController < ApplicationController
   end
 
   def new
-    @section = Section.new({:name => "Default"})
-    @pages = Page.order('position ASC')
+    @section = Section.new({:page_id => @page.id, :name => "Default"})
+    @oages = @page.subject.pages.sorted
+    @section_count = Section.count + 1
   end
 
   def create 

@@ -1,4 +1,8 @@
 <% @page_title = "Subjects" %>
+<div class="row">
+	<%= link_to("<< Back to Menu", {:controller => 'access', :action => 'index'}, :class => 'back-link') %>
+
+</div>
 <div class="subject index">
 		<h2 class="text-center">Subjects</h2>
 
@@ -7,7 +11,7 @@
 		<%= link_to( image_tag('new.jpg', :size => '20x20', :alt => '+') + "Add New Subject", {:action => 'new'}, :class => 'action new') %>
 		<br>
 	<div><%= pluralize(@subjects.size, 'subject') %> found</div>
-		<table class="table" sumamry="Subject list">
+		<table class="table" sumary="Subject list">
 			<tr class="header">
 				
 				<th>Position</th>
@@ -23,6 +27,7 @@
 				<td class="center"><%= status_tag(subject.visible) %></td>
 				<td class="center"><%= subject.pages.size %></td>
 				<td class="actions">
+					<%= link_to("View Pages", {:controller => 'pages', :subject_id => subject.id}, :class => 'action show') %>
 					<%= link_to("Show", {:action => 'show', :id => subject.id}, :class => 'action show') %>
 					<%= link_to("Edit", {:action => 'edit', :id => subject.id}, :class => 'action edit') %>
 					<%= link_to("Delete", {:action => 'delete', :id => subject.id}, :class => 'action delete')%>

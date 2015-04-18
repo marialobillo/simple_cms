@@ -1,12 +1,12 @@
 <div class="container">
 	
-	<%= link_to("<< Back to  List", {:action => 'index'}, :class => 'back-link') %>
+	<%= link_to("<< Back to  List", {:action => 'index', :subject_id => @subject.id}, :class => 'back-link') %>
 
 	<div class="pages new">
 		
 		<h2 class="text-center">Create Page</h2>
 
-		<%= form_for(:page, :url => {:action => 'create'}) do |f| %>
+		<%= form_for(:page, :url => {:action => 'create', :subject_id => @subject.id}) do |f| %>
 
 			<%= render(:partial => "form", :locals => {:f => f}) %>
 

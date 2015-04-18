@@ -16,14 +16,14 @@ class AdminUser < ActiveRecord::Base
 							:length => { :maximum => 25 }
 	validates :last_name, :presence => true, 
 							:length => { :maximum => 50 }
-	validates :username, :length => { :maximum => 8.25 },
+	validates :username, :length => { in: 8..25 },
 							:uniqueness => true
 	validates :email, :presence => true,
 						:length => { :maximum => 100 },
 						:format => EMAIL_REGEX, 
 						:confirmation => true
 
-	validates :username_is_allowed
+	# validates :username_is_allowed
 	# validates :no_new_users_on_saturday, :on => :create
 
 	scope :sorted, lambda { order("last_name ASC, first_name ASC") }
@@ -31,11 +31,13 @@ class AdminUser < ActiveRecord::Base
 	def username_is_allowed
 		if FORBIDDEN_USERNAMES.include?(username)
 			errors.add(:username, "Has been restricted from use.")
+		end
 	end
 
 	def no_new_users_on_saturday
 		if Time.now.wday == 6
 			errors[:base] << "No new users on Saturdays."
+		end
 	end
 
 	def name
@@ -47,8 +49,5 @@ class AdminUser < ActiveRecord::Base
 			errors.add(:username, "has been restricted from use.")
 		end
 	end
-
-
-
 
 end

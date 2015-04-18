@@ -1,0 +1,30 @@
+
+<div class="row">
+	<div class="col-md-8">
+
+		<div class="panel panel-default">
+			<%= error_messages_for(@admin_user) %>
+		</div>
+		<div class="form-group">
+			<%= f.label(:first_name) %>
+			<%= f.text_field(:first_name, :class => 'form-control') %>
+		</div>
+		<div class="form-group">
+			<%= f.label(:last_name) %>
+			<%= f.text_field(:last_name, :class => 'form-control') %>
+		</div>
+		<div class="form-group">
+			<%= f.label(:email) %>
+			<%= f.text_field(:email, :class => 'form-control') %>
+		</div>
+		<div class="form-group">
+			<%= f.label(:username) %>
+			<%= f.text_field(:username, :class => 'form-control') %>
+		</div>
+		<div class="form-group">
+			<%= f.label(:password) %>
+			<%= f.password_field(:password, :class => 'form-control') %>
+		</div>
+
+	</div>
+</div>
