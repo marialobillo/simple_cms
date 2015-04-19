@@ -4,6 +4,7 @@ class Page < ActiveRecord::Base
 	has_many :sections
 	has_and_belongs_to_many :admn_users, :class_name => "AdminUser"
 
+	acts_as_list :scope => :subject
 
 	validates :name, :presence => true, :length => { :maximum => 255 }
 	validates :permalink, :presence => true, 
