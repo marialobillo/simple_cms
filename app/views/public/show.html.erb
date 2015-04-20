@@ -1,0 +1,16 @@
+<h2 class="text-center"><%= @page.name %></h2>
+
+<% @page_title = @page.name %>
+
+<% @page.sections.visible.sorted.each do |section| %>
+	<div class="row">
+		<<div class="col-md-10">
+			<% case section.content_type %>
+			<% when 'HTML' %>
+				<%= raw(sanitize(section.content, :tags => ['strong', 'em', 'a'])) %>
+			<% when 'text' %>
+				<p><%= section.content %></p>
+			<% end %>
+		</div>>
+	</div>
+<% end %>

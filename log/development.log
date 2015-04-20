@@ -12703,3 +12703,106 @@ AbstractController::ActionNotFound (The action 'login' could not be found for Ac
   Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
   Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (73.1ms)
+
+
+Started GET "/" for ::1 at 2015-04-20 13:38:02 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (7.1ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendered public/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 10ms (Views: 9.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2015-04-20 13:51:41 +0200
+Processing by PublicController#index as HTML
+  Rendered public/index.html.erb within layouts/public (0.5ms)
+Completed 200 OK in 76ms (Views: 76.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/admin_users-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 13:51:42 +0200
+
+
+Started GET "/assets/access-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 13:51:42 +0200
+
+
+Started GET "/assets/public-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 13:51:42 +0200
+
+
+Started GET "/assets/application-673c3d4f1b48084eff37190bab2911d5.css?body=1" for ::1 at 2015-04-20 13:51:42 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-20 13:51:42 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-20 13:51:42 +0200
+
+
+Started GET "/" for ::1 at 2015-04-20 13:54:34 +0200
+Processing by PublicController#index as HTML
+  Rendered public/index.html.erb within layouts/public (0.7ms)
+Completed 200 OK in 40ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/access-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 13:54:34 +0200
+
+
+Started GET "/assets/public-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 13:54:34 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-20 13:54:34 +0200
+
+
+Started GET "/assets/admin_users-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 13:54:34 +0200
+
+
+Started GET "/assets/application-673c3d4f1b48084eff37190bab2911d5.css?body=1" for ::1 at 2015-04-20 13:54:34 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-20 13:54:34 +0200
+
+
+Started GET "/" for ::1 at 2015-04-20 13:54:46 +0200
+Processing by PublicController#index as HTML
+  Rendered public/index.html.erb within layouts/public (0.3ms)
+Completed 200 OK in 39ms (Views: 38.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/public-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 13:54:46 +0200
+
+
+Started GET "/assets/admin_users-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 13:54:46 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-20 13:54:46 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-20 13:54:46 +0200
+
+
+Started GET "/assets/access-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 13:54:46 +0200
+
+
+Started GET "/assets/application-673c3d4f1b48084eff37190bab2911d5.css?body=1" for ::1 at 2015-04-20 13:54:46 +0200
+
+
+Started GET "/" for ::1 at 2015-04-20 13:55:20 +0200
+Processing by PublicController#index as HTML
+  Rendered public/index.html.erb within layouts/public (0.1ms)
+Completed 200 OK in 40ms (Views: 40.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/access-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 13:55:20 +0200
+
+
+Started GET "/assets/admin_users-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 13:55:20 +0200
+
+
+Started GET "/assets/application-673c3d4f1b48084eff37190bab2911d5.css?body=1" for ::1 at 2015-04-20 13:55:20 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-20 13:55:20 +0200
+
+
+Started GET "/assets/public-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 13:55:20 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-20 13:55:20 +0200

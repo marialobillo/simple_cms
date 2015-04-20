@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Simple Cms <%= " | #{@page_title}"  if @page_title %>
+  </title>
+<%= stylesheet_link_tag('application', :media => 'all') %>
+</head>
+<body>
+	
+
+<div class="container">
+
+	<div class="navigation">
+		
+	</div>
+
+	<!-- before yield -->
+
+	<%= yield %>
+
+	<!-- after yield -->
+
+</div>
+<br><br>
+<div class="container">
+	<div class="footer">
+	<strong>Simple CMS in Ruby on Rails</strong>
+	</div>
+</div>
+
+</body>
+</html>
