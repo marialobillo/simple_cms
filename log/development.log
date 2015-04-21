@@ -12806,3 +12806,145 @@ Started GET "/assets/public-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1
 
 
 Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-20 13:55:20 +0200
+
+
+Started GET "/" for ::1 at 2015-04-20 16:40:11 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by PublicController#index as HTML
+  Rendered public/index.html.erb within layouts/public (1.3ms)
+  Rendered layouts/_navigation.html.erb (1.6ms)
+Completed 500 Internal Server Error in 76ms
+
+SyntaxError (/Users/maria/Sites/simple_cms/app/views/layouts/_navigation.html.erb:1: syntax error, unexpected '='
+...:OutputBuffer.new; subject || = [] 
+...                               ^):
+  app/views/layouts/_navigation.html.erb:1: syntax error, unexpected '='
+  app/views/layouts/public.html.erb:14:in `_app_views_layouts_public_html_erb__1907662115180133874_70135590015980'
+
+
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.6ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (57.9ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (43.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (102.5ms)
+
+
+Started GET "/" for ::1 at 2015-04-20 16:40:53 +0200
+Processing by PublicController#index as HTML
+  Rendered public/index.html.erb within layouts/public (0.1ms)
+  [1m[35mSubject Load (6.7ms)[0m  SELECT `subjects`.* FROM `subjects` WHERE `subjects`.`visible` = 1  ORDER BY subjects.position ASC
+  Rendered layouts/_navigation.html.erb (26.5ms)
+Completed 500 Internal Server Error in 67ms
+
+ActionView::Template::Error (undefined local variable or method `subjects' for #<#<Class:0x007f936dde9420>:0x007f936dae14d0>):
+    1: <% subject ||= [] %>
+    2: <ul>
+    3: 	<% subjects.each do |subject| %>
+    4: 	<li>
+    5: 		<%= subject.name %>
+    6: 		<ul>
+  app/views/layouts/_navigation.html.erb:3:in `_app_views_layouts__navigation_html_erb___3219480862080934445_70135593691600'
+  app/views/layouts/public.html.erb:14:in `_app_views_layouts_public_html_erb__1907662115180133874_70135590015980'
+
+
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (56.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (43.2ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (87.3ms)
+
+
+Started GET "/" for ::1 at 2015-04-20 16:47:24 +0200
+Processing by PublicController#index as HTML
+  Rendered public/index.html.erb within layouts/public (0.1ms)
+  [1m[36mSubject Load (0.6ms)[0m  [1mSELECT `subjects`.* FROM `subjects` WHERE `subjects`.`visible` = 1  ORDER BY subjects.position ASC[0m
+  Rendered layouts/_navigation.html.erb (15.1ms)
+Completed 500 Internal Server Error in 44ms
+
+ActionView::Template::Error (undefined local variable or method `subjects' for #<#<Class:0x007f936dde9420>:0x007f936dd82090>):
+    1: <% subject ||= [] %>
+    2: <ul>
+    3: 	<% subjects.each do |subject| %>
+    4: 	<li>
+    5: 		<%= subject.name %>
+    6: 		<ul>
+  app/views/layouts/_navigation.html.erb:3:in `_app_views_layouts__navigation_html_erb___3219480862080934445_70135592805540'
+  app/views/layouts/public.html.erb:14:in `_app_views_layouts_public_html_erb__1907662115180133874_70135590015980'
+
+
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/actionpack-4.2.0/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.2ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/console.js.erb within layouts/javascript (40.0ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/maria/.rbenv/versions/2.2.1/lib/ruby/gems/2.2.0/gems/web-console-2.1.2/lib/web_console/templates/index.html.erb (83.6ms)
+
+
+Started GET "/" for ::1 at 2015-04-20 16:47:42 +0200
+Processing by PublicController#index as HTML
+  Rendered public/index.html.erb within layouts/public (0.0ms)
+  Rendered layouts/_navigation.html.erb (0.4ms)
+Completed 200 OK in 39ms (Views: 38.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/access-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 16:47:42 +0200
+
+
+Started GET "/assets/admin_users-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 16:47:42 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-20 16:47:42 +0200
+
+
+Started GET "/assets/public-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 16:47:43 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-20 16:47:43 +0200
+
+
+Started GET "/assets/application-673c3d4f1b48084eff37190bab2911d5.css?body=1" for ::1 at 2015-04-20 16:47:43 +0200
+
+
+Started GET "/" for ::1 at 2015-04-20 19:48:28 +0200
+Processing by PublicController#index as HTML
+  Rendered public/index.html.erb within layouts/public (0.2ms)
+  Rendered layouts/_navigation.html.erb (4.0ms)
+Completed 200 OK in 62ms (Views: 58.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/access-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 19:48:28 +0200
+
+
+Started GET "/assets/public-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 19:48:28 +0200
+
+
+Started GET "/assets/theme.min-67fe03e632dcf26fdfc911a62f4e8408.css?body=1" for ::1 at 2015-04-20 19:48:28 +0200
+
+
+Started GET "/assets/admin_users-dfa7b291102a59957590b4e00e20f1c8.css?body=1" for ::1 at 2015-04-20 19:48:28 +0200
+
+
+Started GET "/assets/bootstrap-d5180c4cffcca11775f4c4899be5b327.css?body=1" for ::1 at 2015-04-20 19:48:28 +0200
+
+
+Started GET "/assets/application-673c3d4f1b48084eff37190bab2911d5.css?body=1" for ::1 at 2015-04-20 19:48:28 +0200
